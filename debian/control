@@ -1,0 +1,12 @@
+Source: pyfll-installer
+Section: unknown
+Priority: extra
+Maintainer: Horst Tritremmel <hjt@sidux.com>
+Build-Depends: cdbs, debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: pyfll-installer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: pyfll-installer test
+ this is only a developer test

@@ -1,0 +1,6 @@
+pyfll-installer (001-1) unstable; urgency=low
+
+  * trivial/ unuseable packaging, inject, actual development starts when it's
+    online
+
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 14:59:42 +0200
