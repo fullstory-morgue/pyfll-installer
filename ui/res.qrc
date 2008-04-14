@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/pixmaps" >
+        <file>pixmaps/1leftarrow.png</file>
+        <file>pixmaps/1rightarrow.png</file>
+        <file>pixmaps/background.png</file>
+        <file>pixmaps/clock.png</file>
+        <file>pixmaps/exit.png</file>
+        <file>pixmaps/gparted.xpm</file>
+        <file>pixmaps/install-gui-16.xpm</file>
+        <file>pixmaps/install-gui-title.png</file>
+        <file>pixmaps/konsole-16.xpm</file>
+        <file>pixmaps/no.png</file>
+        <file>pixmaps/ok.png</file>
+        <file>pixmaps/pyfll-install.png</file>
+        <file>pixmaps/sidux-logo.png</file>
+    </qresource>
+</RCC>
