@@ -4,5 +4,6 @@ pyfll-installer (001-1) unstable; urgency=low
     online
   * worked on tableWidget, partition name, fstype added 
   * uuid to tableWidget added 
+  * bug-fix in libparse-debcontrol-perl 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 16:11:56 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 22:35:50 +0200

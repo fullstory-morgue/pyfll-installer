@@ -123,7 +123,8 @@ class FLLInstaller(object):
                 ''' 2. column in tableWidget = partition typ '''
                 self.id_fs_type = Diskinfo().udevinfo(self.dev).get('ID_FS_TYPE')
                 self.place = [ self.place[0], 1]
-                self.wg.labeltext_to_table(self.place, str(self.id_fs_type.split()[0]))
+                if self.id_fs_type != None:
+                    self.wg.labeltext_to_table(self.place, str(self.id_fs_type.split()[0]))
 
                 ''' 3. column in tableWidget = name of partition '''
                 self.place = [ self.place[0], 2]
@@ -136,7 +137,8 @@ class FLLInstaller(object):
                 ''' 5. column in tableWidget = partition typ '''
                 self.id_fs_uuid = Diskinfo().udevinfo(self.dev).get('ID_FS_UUID')
                 self.place = [ self.place[0], 4]
-                self.wg.labeltext_to_table(self.place, str(self.id_fs_uuid.split()[0]))
+                if self.id_fs_uuid != None:
+                    self.wg.labeltext_to_table(self.place, str(self.id_fs_uuid.split()[0]))
 
 
     def main(self):
