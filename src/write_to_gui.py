@@ -44,6 +44,25 @@ class Write_to_gui(object):
 
         self.widget.setCellWidget(place[0], place[1], self.comboBox)
 
+    def labeltext_to_table(self, place, text):
+        ''' singleline Text to tableWidget '''
+        self.tableLabel = QtGui.QLabel()
+
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setWeight(75)
+        font.setBold(True)
+        self.tableLabel.setFont(font)
+        self.tableLabel.setAutoFillBackground(False)
+        self.tableLabel.setFrameShape(QtGui.QFrame.NoFrame)
+        self.tableLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignCenter)
+        self.tableLabel.setOpenExternalLinks(True)
+        self.tableLabel.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
+        self.tableLabel.setObjectName("label")
+        self.tableLabel.setText(QtGui.QApplication.translate("MainWindow", text, None, QtGui.QApplication.UnicodeUTF8))
+
+        self.widget.setCellWidget(place[0], place[1], self.tableLabel)
+
 
     '''
     comboBox

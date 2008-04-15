@@ -97,16 +97,13 @@ class FLLInstaller(object):
         comboBox_partition and tableWidget_mountpoints
         '''
         self.row     = 20
-        self.column  = 39
+        self.column  = 5
         self.place_x = 0
         self.place   = []
 
         self.wg = Write_to_gui(self.ui, 'tableWidget_mountpoints')
         ''' add Row and Column to table '''
         self.wg.cells_to_table(self.row, self.column)
-
-        self.place = [ 0, 2 ]
-        self.wg.checkbox_to_table(self.place)
 
         self.place = [ -1, 1 ]
         for self.dev in Diskinfo().partitions():
@@ -118,8 +115,23 @@ class FLLInstaller(object):
             else:
                 ''' partitions to table tableWidget_mountpoints '''
                 self.wg = Write_to_gui(self.ui, 'tableWidget_mountpoints')
-                self.place = [ self.place[0] + 1, 1]
-                self.wg.combobox_to_table(self.place, self.dev.split())
+
+                ''' 1. column in tableWidget = name of partition '''
+                self.place = [ self.place[0] + 1, 0]
+                self.wg.labeltext_to_table(self.place, str(self.dev.split()[0]))
+
+                ''' 2. column in tableWidget = partition typ '''
+                self.id_fs_type = Diskinfo().udevinfo(self.dev).get('ID_FS_TYPE')
+                self.place = [ self.place[0], 1]
+                self.wg.labeltext_to_table(self.place, str(self.id_fs_type.split()[0]))
+
+                ''' 3. column in tableWidget = name of partition '''
+                self.place = [ self.place[0], 2]
+                self.wg.combobox_to_table(self.place, [ "ext3", "reiserfs" ])
+
+                ''' 4. column in tableWidget = checkbox format=0|1 '''
+                self.place = [ self.place[0], 3 ]
+                self.wg.checkbox_to_table(self.place)
 
 
     def main(self):
