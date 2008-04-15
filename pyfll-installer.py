@@ -97,7 +97,7 @@ class FLLInstaller(object):
         comboBox_partition and tableWidget_mountpoints
         '''
         self.row     = 20
-        self.column  = 5
+        self.column  = 6
         self.place_x = 0
         self.place   = []
 
@@ -132,6 +132,11 @@ class FLLInstaller(object):
                 ''' 4. column in tableWidget = checkbox format=0|1 '''
                 self.place = [ self.place[0], 3 ]
                 self.wg.checkbox_to_table(self.place)
+
+                ''' 5. column in tableWidget = partition typ '''
+                self.id_fs_uuid = Diskinfo().udevinfo(self.dev).get('ID_FS_UUID')
+                self.place = [ self.place[0], 4]
+                self.wg.labeltext_to_table(self.place, str(self.id_fs_uuid.split()[0]))
 
 
     def main(self):

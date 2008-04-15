@@ -3,5 +3,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * trivial/ unuseable packaging, inject, actual development starts when it's
     online
   * worked on tableWidget, partition name, fstype added 
+  * uuid to tableWidget added 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 16:04:18 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 16:11:56 +0200
