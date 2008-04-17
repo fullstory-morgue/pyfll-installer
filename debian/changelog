@@ -5,5 +5,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * worked on tableWidget, partition name, fstype added 
   * uuid to tableWidget added 
   * bug-fix in libparse-debcontrol-perl 
+  * bug in pyqt4, no icon and text in buttons and labels. icons removed 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 15 Apr 2008 22:35:50 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Thu, 17 Apr 2008 08:46:25 +0200

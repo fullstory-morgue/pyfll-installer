@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui/mainwindow.ui'
 #
-# Created: Fri Apr 11 11:46:00 2008
+# Created: Thu Apr 17 08:46:04 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(QtCore.QSize(QtCore.QRect(0,0,520,450).size()).expandedTo(MainWindow.minimumSizeHint()))
+        MainWindow.resize(QtCore.QSize(QtCore.QRect(0,0,637,521).size()).expandedTo(MainWindow.minimumSizeHint()))
 
         palette = QtGui.QPalette()
 
@@ -30,12 +30,12 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Highlight,brush)
         MainWindow.setPalette(palette)
         MainWindow.setMouseTracking(False)
-        MainWindow.setWindowIcon(QtGui.QIcon(":/pixmaps/pixmaps/install-gui-16.xpm"))
         MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
 
         self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setGeometry(QtCore.QRect(0,27,637,494))
         self.centralwidget.setObjectName("centralwidget")
 
         self.gridlayout = QtGui.QGridLayout(self.centralwidget)
@@ -78,20 +78,16 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName("stackedWidget")
 
         self.start = QtGui.QWidget()
+        self.start.setGeometry(QtCore.QRect(2,2,615,394))
         self.start.setObjectName("start")
 
-        self.label_3 = QtGui.QLabel(self.start)
-        self.label_3.setGeometry(QtCore.QRect(0,-15,1280,1024))
-        self.label_3.setPixmap(QtGui.QPixmap(":/pixmaps/pixmaps/background.png"))
-        self.label_3.setObjectName("label_3")
-
         self.label_4 = QtGui.QLabel(self.start)
-        self.label_4.setGeometry(QtCore.QRect(150,80,350,117))
+        self.label_4.setGeometry(QtCore.QRect(210,100,350,117))
         self.label_4.setPixmap(QtGui.QPixmap(":/pixmaps/pixmaps/sidux-logo.png"))
         self.label_4.setObjectName("label_4")
 
         self.label_12 = QtGui.QLabel(self.start)
-        self.label_12.setGeometry(QtCore.QRect(290,210,80,71))
+        self.label_12.setGeometry(QtCore.QRect(350,220,80,71))
         self.label_12.setPixmap(QtGui.QPixmap(":/pixmaps/pixmaps/pyfll-install.png"))
         self.label_12.setObjectName("label_12")
 
@@ -127,8 +123,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_2.setFont(font)
         self.label_2.setAutoFillBackground(False)
         self.label_2.setFrameShape(QtGui.QFrame.NoFrame)
@@ -169,8 +165,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_19.setFont(font)
         self.label_19.setAutoFillBackground(False)
         self.label_19.setFrameShape(QtGui.QFrame.NoFrame)
@@ -211,8 +207,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_20.setFont(font)
         self.label_20.setAutoFillBackground(False)
         self.label_20.setFrameShape(QtGui.QFrame.NoFrame)
@@ -222,7 +218,7 @@ class Ui_MainWindow(object):
         self.label_20.setObjectName("label_20")
 
         self.line_8 = QtGui.QFrame(self.start)
-        self.line_8.setGeometry(QtCore.QRect(150,10,20,311))
+        self.line_8.setGeometry(QtCore.QRect(150,10,20,371))
         self.line_8.setFrameShape(QtGui.QFrame.VLine)
         self.line_8.setFrameShadow(QtGui.QFrame.Sunken)
         self.line_8.setObjectName("line_8")
@@ -259,8 +255,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_21.setFont(font)
         self.label_21.setAutoFillBackground(False)
         self.label_21.setFrameShape(QtGui.QFrame.NoFrame)
@@ -301,8 +297,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_22.setFont(font)
         self.label_22.setAutoFillBackground(False)
         self.label_22.setFrameShape(QtGui.QFrame.NoFrame)
@@ -343,8 +339,8 @@ class Ui_MainWindow(object):
 
         font = QtGui.QFont()
         font.setPointSize(12)
-        font.setWeight(75)
-        font.setBold(True)
+        font.setWeight(50)
+        font.setBold(False)
         self.label_23.setFont(font)
         self.label_23.setAutoFillBackground(False)
         self.label_23.setFrameShape(QtGui.QFrame.NoFrame)
@@ -355,6 +351,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.start)
 
         self.disclaimer = QtGui.QWidget()
+        self.disclaimer.setGeometry(QtCore.QRect(2,2,615,394))
         self.disclaimer.setObjectName("disclaimer")
 
         self.gridlayout1 = QtGui.QGridLayout(self.disclaimer)
@@ -393,6 +390,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.disclaimer)
 
         self.partition = QtGui.QWidget()
+        self.partition.setGeometry(QtCore.QRect(2,2,615,394))
         self.partition.setObjectName("partition")
 
         self.gridlayout3 = QtGui.QGridLayout(self.partition)
@@ -474,7 +472,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.radioButton_gparted.setFont(font)
-        self.radioButton_gparted.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/gparted.xpm"))
         self.radioButton_gparted.setChecked(True)
         self.radioButton_gparted.setObjectName("radioButton_gparted")
         self.gridlayout7.addWidget(self.radioButton_gparted,1,0,1,1)
@@ -491,7 +488,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.radioButton_cfdisk.setFont(font)
-        self.radioButton_cfdisk.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/konsole-16.xpm"))
         self.radioButton_cfdisk.setObjectName("radioButton_cfdisk")
         self.gridlayout7.addWidget(self.radioButton_cfdisk,2,0,1,1)
 
@@ -506,7 +502,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.radioButton_fdisk.setFont(font)
-        self.radioButton_fdisk.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/konsole-16.xpm"))
         self.radioButton_fdisk.setObjectName("radioButton_fdisk")
         self.gridlayout7.addWidget(self.radioButton_fdisk,3,0,1,1)
 
@@ -543,6 +538,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.partition)
 
         self.mountpoints = QtGui.QWidget()
+        self.mountpoints.setGeometry(QtCore.QRect(2,2,615,394))
         self.mountpoints.setObjectName("mountpoints")
 
         self.gridlayout8 = QtGui.QGridLayout(self.mountpoints)
@@ -614,6 +610,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.mountpoints)
 
         self.password = QtGui.QWidget()
+        self.password.setGeometry(QtCore.QRect(2,2,615,394))
         self.password.setObjectName("password")
 
         self.gridlayout11 = QtGui.QGridLayout(self.password)
@@ -805,6 +802,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.password)
 
         self.hostname = QtGui.QWidget()
+        self.hostname.setGeometry(QtCore.QRect(2,2,615,394))
         self.hostname.setObjectName("hostname")
 
         self.gridlayout13 = QtGui.QGridLayout(self.hostname)
@@ -970,7 +968,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.pushButton_timezone.setFont(font)
-        self.pushButton_timezone.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/clock.png"))
         self.pushButton_timezone.setObjectName("pushButton_timezone")
         self.gridlayout17.addWidget(self.pushButton_timezone,1,1,1,1)
 
@@ -984,6 +981,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.hostname)
 
         self.progress = QtGui.QWidget()
+        self.progress.setGeometry(QtCore.QRect(2,2,615,394))
         self.progress.setObjectName("progress")
 
         self.gridlayout18 = QtGui.QGridLayout(self.progress)
@@ -1061,7 +1059,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_exit.setFont(font)
-        self.pushButton_exit.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/exit.png"))
         self.pushButton_exit.setDefault(True)
         self.pushButton_exit.setObjectName("pushButton_exit")
         self.hboxlayout8.addWidget(self.pushButton_exit)
@@ -1075,7 +1072,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_prev.setFont(font)
-        self.pushButton_prev.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/1leftarrow.png"))
         self.pushButton_prev.setObjectName("pushButton_prev")
         self.hboxlayout8.addWidget(self.pushButton_prev)
 
@@ -1085,14 +1081,13 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.pushButton_next.setFont(font)
         self.pushButton_next.setLayoutDirection(QtCore.Qt.RightToLeft)
-        self.pushButton_next.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/1rightarrow.png"))
         self.pushButton_next.setObjectName("pushButton_next")
         self.hboxlayout8.addWidget(self.pushButton_next)
         self.gridlayout.addLayout(self.hboxlayout8,3,0,1,1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0,0,520,27))
+        self.menubar.setGeometry(QtCore.QRect(0,0,637,27))
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -1111,11 +1106,9 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
 
         self.actionExit = QtGui.QAction(MainWindow)
-        self.actionExit.setIcon(QtGui.QIcon(":/pixmaps/pixmaps/exit.png"))
         self.actionExit.setObjectName("actionExit")
 
         self.action_Help = QtGui.QAction(MainWindow)
-        self.action_Help.setIcon(QtGui.QIcon("../../../../usr/share/icons/crystalsvg/16x16/actions/help.png"))
         self.action_Help.setMenuRole(QtGui.QAction.AboutRole)
         self.action_Help.setObjectName("action_Help")
         self.menuDatei.addAction(self.actionExit)
@@ -1141,44 +1134,52 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "sidux HD-Installation", None, QtGui.QApplication.UnicodeUTF8))
         MainWindow.setStatusTip(QtGui.QApplication.translate("MainWindow", "http://sidux.com", None, QtGui.QApplication.UnicodeUTF8))
         MainWindow.setWhatsThis(QtGui.QApplication.translate("MainWindow", "install sidux to your harddisk", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        self.label_2.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "p, li { white-space: pre-wrap; }\n"
+        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><a href=\"http://sidux.com/\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux homepage</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_19.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
         "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux.com/\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux homepage</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_19.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://manual.sidux.com/\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux manual</span></a><span style=\" font-weight:400; color:#f0ffff;\"> </span></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_20.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
         "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://manual.sidux.com/\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux manual</span></a><span style=\" color:#f0ffff;\"> </span></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_20.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux.com/module-PNphpBB2.html\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux forum</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_21.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
         "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux.com/module-PNphpBB2.html\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux forum</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_21.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux.com/module-pnWikka.html\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux wiki</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_22.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
         "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux.com/module-pnWikka.html\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux wiki</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_22.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux-ev.de/\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux e.V.</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_23.setText(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
         "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://sidux-ev.de/\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux e.V.</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_23.setText(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://www.linux-versand.org/index.php/cat/c75_All-for-sidux.html\"><span style=\" font-weight:400; text-decoration: underline; color:#f0ffff;\">sidux webshop</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.textBrowser_disclaimer.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://www.linux-versand.org/index.php/cat/c75_All-for-sidux.html\"><span style=\" text-decoration: underline; color:#f0ffff;\">sidux webshop</span></a></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.textBrowser_disclaimer.setHtml(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-        "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
         "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:18pt; font-weight:600; text-decoration: underline; color:#c0c0c0;\"><span style=\" font-size:12pt; color:#000000;\">Disclaimer</span></p>\n"
         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:18pt; font-weight:600; text-decoration: underline; color:#c0c0c0;\"><span style=\" font-size:11pt; font-weight:400; text-decoration:none; color:#000000;\">sidux is a ...</span></p>\n"
         "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; color:#000000;\"></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
-        self.textBrowser_partition.setHtml(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        self.textBrowser_partition.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:600;\">partition your harddisk</span></p>\n"
-        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\">sidux prefers ext3.</p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#0000ff;\"><a href=\"http://manual.sidux.com/en/part-gparted-en.html#partition\">How to partition your HD</a></p>\n"
-        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span style=\" font-size:11pt; font-weight:600;\">partition your harddisk</span></p>\n"
+        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">sidux prefers ext3.</p>\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0000ff;\"><a href=\"http://manual.sidux.com/en/part-gparted-en.html#partition\"><span style=\" color:#0057ae;\">How to partition your HD</span></a></p>\n"
+        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("MainWindow", "Partition Editor", None, QtGui.QApplication.UnicodeUTF8))
         self.radioButton_gparted.setText(QtGui.QApplication.translate("MainWindow", "&gparted", None, QtGui.QApplication.UnicodeUTF8))
         self.radioButton_cfdisk.setText(QtGui.QApplication.translate("MainWindow", "&cfdisk", None, QtGui.QApplication.UnicodeUTF8))
@@ -1194,20 +1195,22 @@ class Ui_MainWindow(object):
         self.tableWidget_mountpoints.clear()
         self.tableWidget_mountpoints.setColumnCount(0)
         self.tableWidget_mountpoints.setRowCount(0)
-        self.textBrowser_password.setHtml(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        self.textBrowser_password.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter the Password</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\">Enter the Password</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.label_13.setText(QtGui.QApplication.translate("MainWindow", "Root-password:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_14.setText(QtGui.QApplication.translate("MainWindow", "Root-password again:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_15.setText(QtGui.QApplication.translate("MainWindow", "Realname:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_16.setText(QtGui.QApplication.translate("MainWindow", "Username:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_17.setText(QtGui.QApplication.translate("MainWindow", "Password:", None, QtGui.QApplication.UnicodeUTF8))
         self.label_18.setText(QtGui.QApplication.translate("MainWindow", "Password again:", None, QtGui.QApplication.UnicodeUTF8))
-        self.textBrowser_hostname.setHtml(QtGui.QApplication.translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        self.textBrowser_hostname.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
         "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Network and services</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        "</style></head><body style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\">Network and services</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.label_25.setText(QtGui.QApplication.translate("MainWindow", "Hostname:", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_services.setTitle(QtGui.QApplication.translate("MainWindow", "start services", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_cupsys.setText(QtGui.QApplication.translate("MainWindow", "cupsys (Printing System)", None, QtGui.QApplication.UnicodeUTF8))

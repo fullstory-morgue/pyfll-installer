@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>450</height>
+    <width>637</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="palette" >
@@ -56,9 +56,6 @@
   <property name="windowTitle" >
    <string>sidux HD-Installation</string>
   </property>
-  <property name="windowIcon" >
-   <iconset resource="res.qrc" >:/pixmaps/pixmaps/install-gui-16.xpm</iconset>
-  </property>
   <property name="toolTip" >
    <string/>
   </property>
@@ -78,6 +75,14 @@
    <enum>Qt::ToolButtonTextBesideIcon</enum>
   </property>
   <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>27</y>
+     <width>637</width>
+     <height>494</height>
+    </rect>
+   </property>
    <layout class="QGridLayout" >
     <item row="0" column="0" >
      <widget class="QStackedWidget" name="stackedWidget" >
@@ -170,27 +175,19 @@
        <number>0</number>
       </property>
       <widget class="QWidget" name="start" >
-       <widget class="QLabel" name="label_3" >
-        <property name="geometry" >
-         <rect>
-          <x>0</x>
-          <y>-15</y>
-          <width>1280</width>
-          <height>1024</height>
-         </rect>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-        <property name="pixmap" >
-         <pixmap resource="res.qrc" >:/pixmaps/pixmaps/background.png</pixmap>
-        </property>
-       </widget>
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <widget class="QLabel" name="label_4" >
         <property name="geometry" >
          <rect>
-          <x>150</x>
-          <y>80</y>
+          <x>210</x>
+          <y>100</y>
           <width>350</width>
           <height>117</height>
          </rect>
@@ -205,8 +202,8 @@
        <widget class="QLabel" name="label_12" >
         <property name="geometry" >
          <rect>
-          <x>290</x>
-          <y>210</y>
+          <x>350</x>
+          <y>220</y>
           <width>80</width>
           <height>71</height>
          </rect>
@@ -294,8 +291,8 @@
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -306,10 +303,11 @@
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux.com/">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux homepage&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;">&lt;a href="http://sidux.com/">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux homepage&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -397,8 +395,8 @@ p, li { white-space: pre-wrap; }
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -409,10 +407,11 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://manual.sidux.com/">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux manual&lt;/span>&lt;/a>&lt;span style=" color:#f0ffff;"> &lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://manual.sidux.com/">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux manual&lt;/span>&lt;/a>&lt;span style=" font-weight:400; color:#f0ffff;"> &lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -500,8 +499,8 @@ p, li { white-space: pre-wrap; }
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -512,10 +511,11 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux.com/module-PNphpBB2.html">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux forum&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux.com/module-PNphpBB2.html">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux forum&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -533,7 +533,7 @@ p, li { white-space: pre-wrap; }
           <x>150</x>
           <y>10</y>
           <width>20</width>
-          <height>311</height>
+          <height>371</height>
          </rect>
         </property>
         <property name="orientation" >
@@ -616,8 +616,8 @@ p, li { white-space: pre-wrap; }
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -628,10 +628,11 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux.com/module-pnWikka.html">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux wiki&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux.com/module-pnWikka.html">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux wiki&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -719,8 +720,8 @@ p, li { white-space: pre-wrap; }
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -731,10 +732,11 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux-ev.de/">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux e.V.&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://sidux-ev.de/">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux e.V.&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -822,8 +824,8 @@ p, li { white-space: pre-wrap; }
         <property name="font" >
          <font>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -834,10 +836,11 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="text" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:12pt; font-weight:600; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://www.linux-versand.org/index.php/cat/c75_All-for-sidux.html">&lt;span style=" text-decoration: underline; color:#f0ffff;">sidux webshop&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;a href="http://www.linux-versand.org/index.php/cat/c75_All-for-sidux.html">&lt;span style=" font-weight:400; text-decoration: underline; color:#f0ffff;">sidux webshop&lt;/span>&lt;/a>&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="alignment" >
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -851,6 +854,14 @@ p, li { white-space: pre-wrap; }
        </widget>
       </widget>
       <widget class="QWidget" name="disclaimer" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <widget class="QLabel" name="label" >
@@ -881,7 +892,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>16</height>
@@ -910,9 +921,10 @@ p, li { white-space: pre-wrap; }
              <bool>false</bool>
             </property>
             <property name="html" >
-             <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
 &lt;p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:18pt; font-weight:600; text-decoration: underline; color:#c0c0c0;">&lt;span style=" font-size:12pt; color:#000000;">Disclaimer&lt;/span>&lt;/p>
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:18pt; font-weight:600; text-decoration: underline; color:#c0c0c0;">&lt;span style=" font-size:11pt; font-weight:400; text-decoration:none; color:#000000;">sidux is a ...&lt;/span>&lt;/p>
 &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; color:#000000;">&lt;/p>&lt;/body>&lt;/html></string>
@@ -924,6 +936,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="partition" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QGridLayout" >
@@ -955,14 +975,15 @@ p, li { white-space: pre-wrap; }
              </sizepolicy>
             </property>
             <property name="html" >
-             <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:11pt; font-weight:600;">partition your harddisk&lt;/span>&lt;/p>
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;">&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;">sidux prefers ext3.&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#0000ff;">&lt;a href="http://manual.sidux.com/en/part-gparted-en.html#partition">How to partition your HD&lt;/a>&lt;/p>
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;">&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;">&lt;span style=" font-size:11pt; font-weight:600;">partition your harddisk&lt;/span>&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">sidux prefers ext3.&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0000ff;">&lt;a href="http://manual.sidux.com/en/part-gparted-en.html#partition">&lt;span style=" color:#0057ae;">How to partition your HD&lt;/span>&lt;/a>&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/p>&lt;/body>&lt;/html></string>
             </property>
             <property name="openExternalLinks" >
              <bool>true</bool>
@@ -977,7 +998,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>20</height>
@@ -1002,7 +1023,7 @@ p, li { white-space: pre-wrap; }
           <property name="sizeType" >
            <enum>QSizePolicy::Preferred</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>20</width>
             <height>96</height>
@@ -1020,7 +1041,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>110</width>
               <height>80</height>
@@ -1066,9 +1087,6 @@ p, li { white-space: pre-wrap; }
                  <property name="text" >
                   <string>&amp;gparted</string>
                  </property>
-                 <property name="icon" >
-                  <iconset resource="res.qrc" >:/pixmaps/pixmaps/gparted.xpm</iconset>
-                 </property>
                  <property name="checked" >
                   <bool>true</bool>
                  </property>
@@ -1093,9 +1111,6 @@ p, li { white-space: pre-wrap; }
                  <property name="text" >
                   <string>&amp;cfdisk</string>
                  </property>
-                 <property name="icon" >
-                  <iconset resource="res.qrc" >:/pixmaps/pixmaps/konsole-16.xpm</iconset>
-                 </property>
                 </widget>
                </item>
                <item row="3" column="0" >
@@ -1113,9 +1128,6 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <property name="text" >
                   <string>&amp;fdisk</string>
-                 </property>
-                 <property name="icon" >
-                  <iconset resource="res.qrc" >:/pixmaps/pixmaps/konsole-16.xpm</iconset>
                  </property>
                 </widget>
                </item>
@@ -1162,7 +1174,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>40</height>
@@ -1180,7 +1192,7 @@ p, li { white-space: pre-wrap; }
           <property name="sizeType" >
            <enum>QSizePolicy::Preferred</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>20</width>
             <height>96</height>
@@ -1191,6 +1203,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="mountpoints" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <widget class="QLabel" name="label_5" >
@@ -1224,7 +1244,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>16</width>
               <height>20</height>
@@ -1273,7 +1293,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>16</width>
               <height>20</height>
@@ -1329,6 +1349,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="password" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item rowspan="13" row="0" column="0" >
          <layout class="QGridLayout" >
@@ -1359,7 +1387,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>20</height>
@@ -1376,10 +1404,11 @@ p, li { white-space: pre-wrap; }
              </sizepolicy>
             </property>
             <property name="html" >
-             <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Enter the Password&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;">Enter the Password&lt;/p>&lt;/body>&lt;/html></string>
             </property>
            </widget>
           </item>
@@ -1642,6 +1671,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="hostname" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QGridLayout" >
@@ -1672,7 +1709,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>20</height>
@@ -1689,10 +1726,11 @@ p, li { white-space: pre-wrap; }
              </sizepolicy>
             </property>
             <property name="html" >
-             <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+             <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Network and services&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;">Network and services&lt;/p>&lt;/body>&lt;/html></string>
             </property>
            </widget>
           </item>
@@ -1701,7 +1739,7 @@ p, li { white-space: pre-wrap; }
             <property name="orientation" >
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>40</width>
               <height>20</height>
@@ -1728,7 +1766,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>21</height>
@@ -1795,7 +1833,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>21</height>
@@ -1858,7 +1896,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>16</height>
@@ -1874,7 +1912,7 @@ p, li { white-space: pre-wrap; }
             <property name="sizeType" >
              <enum>QSizePolicy::Preferred</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>20</width>
               <height>21</height>
@@ -1951,9 +1989,6 @@ p, li { white-space: pre-wrap; }
                <property name="text" >
                 <string>Timezone</string>
                </property>
-               <property name="icon" >
-                <iconset resource="res.qrc" >:/pixmaps/pixmaps/clock.png</iconset>
-               </property>
               </widget>
              </item>
              <item row="1" column="0" >
@@ -1964,7 +1999,7 @@ p, li { white-space: pre-wrap; }
                <property name="sizeType" >
                 <enum>QSizePolicy::Preferred</enum>
                </property>
-               <property name="sizeHint" >
+               <property name="sizeHint" stdset="0" >
                 <size>
                  <width>40</width>
                  <height>20</height>
@@ -1980,7 +2015,7 @@ p, li { white-space: pre-wrap; }
                <property name="sizeType" >
                 <enum>QSizePolicy::Preferred</enum>
                </property>
-               <property name="sizeHint" >
+               <property name="sizeHint" stdset="0" >
                 <size>
                  <width>40</width>
                  <height>20</height>
@@ -1996,6 +2031,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="progress" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>2</y>
+         <width>615</width>
+         <height>394</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <spacer>
@@ -2005,7 +2048,7 @@ p, li { white-space: pre-wrap; }
           <property name="sizeType" >
            <enum>QSizePolicy::Preferred</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>20</width>
             <height>40</height>
@@ -2020,7 +2063,7 @@ p, li { white-space: pre-wrap; }
             <property name="orientation" >
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>40</width>
               <height>20</height>
@@ -2043,7 +2086,7 @@ p, li { white-space: pre-wrap; }
             <property name="orientation" >
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>40</width>
               <height>20</height>
@@ -2061,7 +2104,7 @@ p, li { white-space: pre-wrap; }
           <property name="sizeType" >
            <enum>QSizePolicy::Preferred</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>20</width>
             <height>16</height>
@@ -2117,7 +2160,7 @@ p, li { white-space: pre-wrap; }
           <property name="sizeType" >
            <enum>QSizePolicy::Preferred</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>20</width>
             <height>20</height>
@@ -2166,9 +2209,6 @@ p, li { white-space: pre-wrap; }
         <property name="text" >
          <string>&amp;Exit</string>
         </property>
-        <property name="icon" >
-         <iconset resource="res.qrc" >:/pixmaps/pixmaps/exit.png</iconset>
-        </property>
         <property name="default" >
          <bool>true</bool>
         </property>
@@ -2179,7 +2219,7 @@ p, li { white-space: pre-wrap; }
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0" >
          <size>
           <width>181</width>
           <height>20</height>
@@ -2200,9 +2240,6 @@ p, li { white-space: pre-wrap; }
         <property name="text" >
          <string>&amp;Prev</string>
         </property>
-        <property name="icon" >
-         <iconset resource="res.qrc" >:/pixmaps/pixmaps/1leftarrow.png</iconset>
-        </property>
        </widget>
       </item>
       <item>
@@ -2218,9 +2255,6 @@ p, li { white-space: pre-wrap; }
         <property name="text" >
          <string>&amp;Next</string>
         </property>
-        <property name="icon" >
-         <iconset resource="res.qrc" >:/pixmaps/pixmaps/1rightarrow.png</iconset>
-        </property>
        </widget>
       </item>
      </layout>
@@ -2232,7 +2266,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>520</width>
+     <width>637</width>
      <height>27</height>
     </rect>
    </property>
@@ -2262,17 +2296,11 @@ p, li { white-space: pre-wrap; }
    <addaction name="menu_Help" />
   </widget>
   <action name="actionExit" >
-   <property name="icon" >
-    <iconset resource="res.qrc" >:/pixmaps/pixmaps/exit.png</iconset>
-   </property>
    <property name="text" >
     <string>&amp;Exit</string>
    </property>
   </action>
   <action name="action_Help" >
-   <property name="icon" >
-    <iconset>../../../../usr/share/icons/crystalsvg/16x16/actions/help.png</iconset>
-   </property>
    <property name="text" >
     <string>&amp;About</string>
    </property>
