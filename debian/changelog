@@ -7,5 +7,7 @@ pyfll-installer (001-1) unstable; urgency=low
   * bug-fix in libparse-debcontrol-perl 
   * bug in pyqt4, no icon and text in buttons and labels. icons removed 
   * tableWidget shows the text now 
+  * cd '/home/hjt/fll/pyfll-installer/trunk'
+  * timzone file and supported filesystem changed to pyfll-installer.conf
 
- -- Horst Tritremmel <hjt@sidux.com>  Thu, 17 Apr 2008 16:31:09 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Fri, 18 Apr 2008 11:42:00 +0200

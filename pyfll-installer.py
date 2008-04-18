@@ -20,7 +20,6 @@ from src.disk import *
 
 # files
 conf_file = "pyfll-installer.conf"
-tz_file   = "/etc/timezone"
 
 
 class Error(Exception):
@@ -29,9 +28,9 @@ class Error(Exception):
 
 
 class FLLInstaller(object):
-    def __init__(self, conf_file, tz_file):
+    def __init__(self, conf_file):
         self.conf_file = conf_file
-        self.tz_file   = tz_file
+        #self.tz_file   = tz_file
 
         '''
         set ui
@@ -40,6 +39,10 @@ class FLLInstaller(object):
         self.MainWindow = QtGui.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
+
+        ''' read config file and write values to widgets '''
+        self.cfile = ConfigObj(self.conf_file)
+        self.tzfile = self.cfile['timezone']['tz_file']
 
 
     def default_text(self):
@@ -57,7 +60,7 @@ class FLLInstaller(object):
         '''
         label_timezone
         '''
-        self.file = open(self.tz_file)
+        self.file = open(self.tzfile)
         self.tz = self.file.readline()
         self.file.close()
 
@@ -66,8 +69,6 @@ class FLLInstaller(object):
 
 
     def read_config(self):
-        ''' read config file and write values to widgets '''
-        self.cfile = ConfigObj(self.conf_file)
 
         '''
         comboBox
@@ -128,7 +129,7 @@ class FLLInstaller(object):
 
                 ''' 3. column in tableWidget = name of partition '''
                 self.place = [ self.place[0], 2]
-                self.wg.combobox_to_table(self.place, [ "ext3", "reiserfs" ])
+                self.wg.combobox_to_table(self.place, self.cfile['filesystem']['supported'].split())
 
                 ''' 4. column in tableWidget = checkbox format=0|1 '''
                 self.place = [ self.place[0], 3 ]
@@ -173,7 +174,7 @@ class FLLInstaller(object):
 #
 if __name__ == "__main__":
     try:
-        fll = FLLInstaller(conf_file, tz_file)
+        fll = FLLInstaller(conf_file)
         fll.main()
     except KeyboardInterrupt:
         pass
