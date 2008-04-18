@@ -21,6 +21,27 @@ class Write_to_gui(object):
         ''' find and set the widget by widgetName '''
         self.widget = self.ui.centralwidget.findChild(QtGui.QWidget, self.widgetName)
 
+
+    def setHorizontalHeader(self):
+        ''' setHorizontalHeader '''
+
+        self.header = \
+        [
+        QtGui.QApplication.translate("TableEditor", "Partition", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "Filesystem", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "Format with", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "Format", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "Mountpoint", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "UUID", None, QtGui.QApplication.UnicodeUTF8)
+        ]
+
+        for self.text in self.header:
+            self.headerItem = QtGui.QTableWidgetItem()
+            self.headerItem.setText(self.text)
+            self.pos = self.header.index(self.text)
+            self.widget.setHorizontalHeaderItem(self.pos, self.headerItem)
+
+
     '''
     Table
     '''
@@ -48,26 +69,6 @@ class Write_to_gui(object):
         ''' singleline Text to tableWidget '''
 
         self.tableLabel = QtGui.QLabel()
-
-        self.headerItem = QtGui.QTableWidgetItem()
-        self.headerItem.setText(QtGui.QApplication.translate("TableEditor", "Partition", None, QtGui.QApplication.UnicodeUTF8))
-        self.widget.setHorizontalHeaderItem(0,self.headerItem)
-
-        self.headerItem = QtGui.QTableWidgetItem()
-        self.headerItem.setText(QtGui.QApplication.translate("TableEditor", "Filesystem", None, QtGui.QApplication.UnicodeUTF8))
-        self.widget.setHorizontalHeaderItem(1,self.headerItem)
-
-        self.headerItem = QtGui.QTableWidgetItem()
-        self.headerItem.setText(QtGui.QApplication.translate("TableEditor", "Format with", None, QtGui.QApplication.UnicodeUTF8))
-        self.widget.setHorizontalHeaderItem(2,self.headerItem)
-
-        self.headerItem = QtGui.QTableWidgetItem()
-        self.headerItem.setText(QtGui.QApplication.translate("TableEditor", "Format", None, QtGui.QApplication.UnicodeUTF8))
-        self.widget.setHorizontalHeaderItem(3,self.headerItem)
-
-        self.headerItem = QtGui.QTableWidgetItem()
-        self.headerItem.setText(QtGui.QApplication.translate("TableEditor", "UUID", None, QtGui.QApplication.UnicodeUTF8))
-        self.widget.setHorizontalHeaderItem(4,self.headerItem)
 
         item = QtGui.QTableWidgetItem(str(text))
         item.setFlags(QtCore.Qt.ItemIsEnabled)

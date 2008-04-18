@@ -30,7 +30,6 @@ class Error(Exception):
 class FLLInstaller(object):
     def __init__(self, conf_file):
         self.conf_file = conf_file
-        #self.tz_file   = tz_file
 
         '''
         set ui
@@ -101,10 +100,14 @@ class FLLInstaller(object):
         self.column  = 6
         self.place_x = 0
         self.place   = []
+        self.mp      = []
 
         self.wg = Write_to_gui(self.ui, 'tableWidget_mountpoints')
         ''' add Row and Column to table '''
         self.wg.cells_to_table(self.row, self.column)
+
+        ''' setHorizontalHeader in tableWidget'''
+        self.wg.setHorizontalHeader()
 
         self.place = [ -1, 1 ]
         for self.dev in Diskinfo().partitions():
@@ -127,7 +130,7 @@ class FLLInstaller(object):
                 if self.id_fs_type != None:
                     self.wg.labeltext_to_table(self.place, str(self.id_fs_type.split()[0]))
 
-                ''' 3. column in tableWidget = name of partition '''
+                ''' 3. column in tableWidget = Format_with '''
                 self.place = [ self.place[0], 2]
                 self.wg.combobox_to_table(self.place, self.cfile['filesystem']['supported'].split())
 
@@ -135,9 +138,15 @@ class FLLInstaller(object):
                 self.place = [ self.place[0], 3 ]
                 self.wg.checkbox_to_table(self.place)
 
-                ''' 5. column in tableWidget = partition typ '''
-                self.id_fs_uuid = Diskinfo().udevinfo(self.dev).get('ID_FS_UUID')
+                ''' 5. column in tableWidget = mountpoint '''
                 self.place = [ self.place[0], 4]
+                self.mp = [ "" ]
+                self.mp += self.cfile['filesystem']['mountpoints'].split()
+                self.wg.combobox_to_table(self.place, self.mp)
+
+                ''' 6. column in tableWidget = partition typ '''
+                self.id_fs_uuid = Diskinfo().udevinfo(self.dev).get('ID_FS_UUID')
+                self.place = [ self.place[0], 5]
                 if self.id_fs_uuid != None:
                     self.wg.labeltext_to_table(self.place, str(self.id_fs_uuid.split()[0]))
 
