@@ -6,7 +6,9 @@ __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
 
-import os, sys
+import os
+import commands
+import sys
 from configobj import ConfigObj
 
 from PyQt4 import QtCore, QtGui
@@ -117,6 +119,12 @@ class FLLInstaller(object):
                 self.wg = Write_to_gui(self.ui, 'comboBox_partition')
                 self.wg.text_to_combobox(self.dev.split())
             else:
+
+                self.fdisk_l = commands.getoutput("fdisk -l %s" % (self.dev)).split('\n')
+                if len(self.fdisk_l) < 2:
+                    # if partition is extended do noting
+                    continue
+
                 ''' partitions to table tableWidget_mountpoints '''
                 self.wg = Write_to_gui(self.ui, 'tableWidget_mountpoints')
 
@@ -129,6 +137,8 @@ class FLLInstaller(object):
                 self.place = [ self.place[0], 1]
                 if self.id_fs_type != None:
                     self.wg.labeltext_to_table(self.place, str(self.id_fs_type.split()[0]))
+                else:
+                    self.wg.labeltext_to_table(self.place, "")
 
                 ''' 3. column in tableWidget = Format_with '''
                 self.place = [ self.place[0], 2]
@@ -149,6 +159,8 @@ class FLLInstaller(object):
                 self.place = [ self.place[0], 5]
                 if self.id_fs_uuid != None:
                     self.wg.labeltext_to_table(self.place, str(self.id_fs_uuid.split()[0]))
+                else:
+                    self.wg.labeltext_to_table(self.place, "")
 
 
     def main(self):
