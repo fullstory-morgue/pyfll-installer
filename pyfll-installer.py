@@ -119,10 +119,10 @@ class FLLInstaller(object):
                 self.wg = Write_to_gui(self.ui, 'comboBox_partition')
                 self.wg.text_to_combobox(self.dev.split())
             else:
-
-                self.fdisk_l = commands.getoutput("fdisk -l %s" % (self.dev)).split('\n')
+                self.fdisk_l = commands.getoutput('fdisk -l %s' % (self.dev)).split('\n')
                 if len(self.fdisk_l) < 2:
                     # if partition is extended do noting
+                    print self.fdisk_l
                     continue
 
                 ''' partitions to table tableWidget_mountpoints '''
@@ -167,6 +167,11 @@ class FLLInstaller(object):
         '''
         start translation
         '''
+        self.user_id = commands.getoutput('getent passwd ${USER} | cut -d\: -f3')
+        if self.user_id != "0":
+            print "Requires root!"
+            sys.exit(1)
+
         self.t  = Gettxt()
         self.ts = Gettxt_gui(self.ui, self.MainWindow, self.app)
         self.ts.gettxt_gui_run()

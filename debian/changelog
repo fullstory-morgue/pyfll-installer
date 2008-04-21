@@ -11,5 +11,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * timzone file and supported filesystem changed to pyfll-installer.conf
   * mountpoint to tableWidget added 
   * if partition is extended do noting 
+  * Requires root message 
 
- -- Horst Tritremmel <hjt@sidux.com>  Mon, 21 Apr 2008 22:23:32 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Mon, 21 Apr 2008 23:15:27 +0200
