@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pyuic4 -o src/ui_mainwindow.py ui/mainwindow.ui
+pylupdate4 pyfll-installer.pro
+pyrcc4 -o res_rc.py ui/res.qrc
+
+# compile py files
+python -m compileall .
+python -m compileall src

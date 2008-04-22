@@ -16,5 +16,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * self codes added to translations.py
   * run_partition_tool callback added 
   * bash start script added 
+  * build script to bash 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 16:42:11 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 16:50:39 +0200
