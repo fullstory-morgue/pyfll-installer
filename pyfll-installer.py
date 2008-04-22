@@ -33,18 +33,9 @@ class FLLInstaller(object):
     def __init__(self, conf_file):
         self.conf_file = conf_file
 
-        '''
-        set ui
-        '''
-        self.app = QtGui.QApplication(sys.argv)
-        self.MainWindow = QtGui.QMainWindow()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self.MainWindow)
-
         ''' read config file and write values to widgets '''
         self.cfile = ConfigObj(self.conf_file)
         self.tzfile = self.cfile['timezone']['tz_file']
-
 
     def default_text(self):
         '''
@@ -164,17 +155,28 @@ class FLLInstaller(object):
 
 
     def main(self):
-        '''
-        start translation
-        '''
+        ''' root '''
         self.user_id = commands.getoutput('getent passwd ${USER} | cut -d\: -f3')
         if self.user_id != "0":
             print "Requires root!"
             sys.exit(1)
 
+        '''
+        set ui
+        '''
+        self.app = QtGui.QApplication(sys.argv)
+        self.MainWindow = QtGui.QMainWindow()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.MainWindow)
+
+
+        '''
+        start translation
+        '''
         self.t  = Gettxt()
         self.ts = Gettxt_gui(self.ui, self.MainWindow, self.app)
         self.ts.gettxt_gui_run()
+
 
         '''
         values to ui at start
@@ -182,6 +184,7 @@ class FLLInstaller(object):
         fll.default_text()
         fll.read_config()
         fll.partition_start()
+
 
         '''
         callbacks from ui
