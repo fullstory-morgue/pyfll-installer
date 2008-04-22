@@ -14,5 +14,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * Requires root message 
   * moved ui = ... to main, don't use it in init (SEGFAULT) 
   * self codes added to translations.py
+  * run_partition_tool callback added 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 14:49:26 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 15:21:41 +0200
