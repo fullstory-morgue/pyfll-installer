@@ -15,5 +15,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * moved ui = ... to main, don't use it in init (SEGFAULT) 
   * self codes added to translations.py
   * run_partition_tool callback added 
+  * bash start script added 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 15:21:41 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 16:42:11 +0200
