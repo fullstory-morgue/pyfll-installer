@@ -13,5 +13,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * if partition is extended do noting 
   * Requires root message 
   * moved ui = ... to main, don't use it in init (SEGFAULT) 
+  * self codes added to translations.py
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 14:01:36 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 14:49:26 +0200

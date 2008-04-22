@@ -36,30 +36,30 @@ class Gettxt_gui(object):
         load $LANG
         '''
         try:
-            lang = os.environ["LANG"]
+            self.lang = os.environ["LANG"]
             #lang = str(QLocale.system().name())
         except:
             print "$LANG not found!"
             return
 
-        if len(lang) < 2:
+        if len(self.lang) < 2:
             return
 
         '''
         create .qm (translation file) filepath
         de, fr, pt, ...
         '''
-        locale   = lang.split("_")
-        path     = os.path.dirname(__file__) + "/../ts"        # *.qm filepath
-        progname = os.path.basename(sys.argv[0]).split(".")    # echo $0, without .py
-        ts_file  = progname[0] + "_" + locale[0] + ".qm"
+        self.locale   = self.lang.split("_")
+        self.path     = '%s%s' % (os.path.dirname(__file__), "/../ts")        # *.qm filepath
+        self.progname = os.path.basename(sys.argv[0]).split(".")    # echo $0, without .py
+        self.ts_file  = self.progname[0] + "_" + self.locale[0] + ".qm"
 
         ''' load translation file '''
-        trans = QTranslator(self.app)
-        self.app.installTranslator(trans)
-        loaded = trans.load(ts_file, path)
-        if not loaded:
-            print path + "/" + ts_file + " not found!"
+        self.trans = QTranslator(self.app)
+        self.app.installTranslator(self.trans)
+        self.loaded = self.trans.load(self.ts_file, self.path)
+        if not self.loaded:
+            print '%s/%s not found!' % (self.path, self.ts_file)
 
         ''' translate now '''
         self.ui.retranslateUi(self.MainWindow)
