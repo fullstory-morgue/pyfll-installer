@@ -5,7 +5,7 @@ __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
 from PyQt4 import QtCore, QtGui
-import commands
+from subprocess import *
 
 #
 # read from gui (callbacks)
@@ -60,17 +60,27 @@ class Callback(QtGui.QMainWindow):
 
     def run_partition_tool(self):
         self.device = self.ui.comboBox_partition.currentText()
+
         if self.ui.radioButton_gparted.isChecked():
             print 'start %s with gparted' % (self.device)
-            self.result = commands.getoutput("gparted %s" % ( self.device))
-            print self.result
+            self.cmd = ['gparted', self.device]
+            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+            print self.c.communicate()[0]
+            if not self.c.returncode == 0:
+                print 'Error: %s' % ( ' '.join(self.cmd) )
 
         if self.ui.radioButton_cfdisk.isChecked():
             print 'start %s with cfdisk' % (self.device)
-            self.result = commands.getoutput("x-terminal-emulator -e cfdisk %s" % ( self.device))
-            print self.result
+            self.cmd = ['x-terminal-emulator', '-e', 'cfdisk', self.device]
+            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+            print self.c.communicate()[0]
+            if not self.c.returncode == 0:
+                print 'Error: %s' % ( ' '.join(self.cmd) )
 
         if self.ui.radioButton_fdisk.isChecked():
             print 'start %s with fdisk' % (self.device)
-            self.result = commands.getoutput("x-terminal-emulator -e  fdisk %s" % ( self.device))
-            print self.result
+            self.cmd = ['x-terminal-emulator', '-e', 'fdisk', self.device]
+            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+            print self.c.communicate()[0]
+            if not self.c.returncode == 0:
+                print 'Error: %s' % ( ' '.join(self.cmd) )
