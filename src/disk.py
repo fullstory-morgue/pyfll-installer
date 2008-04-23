@@ -5,7 +5,7 @@ __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
 import os
-import commands
+from subprocess import *
 
 PROC_PARTITIONS = '/proc/partitions'
 SYS_BLOCK       = '/sys/block'
@@ -46,11 +46,20 @@ class Diskinfo(object):
             self.dict_udevinfo['TYP'] = 'partition'
 
         ''' start udevinfo comand '''
-        self.udevinfo = commands.getoutput("%s%s" % (UDEVINFO_CMD, self.device)).split('\n')
+        self.cmd = ("%s%s" % (UDEVINFO_CMD, self.device)).split()
+        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+        self.udevinfo = self.c.communicate()[0].split('\n')
+        if not self.c.returncode == 0:
+            print 'Error: %s' % ( ' '.join(self.cmd) )
+
+
         ''' split udevinfo and create dict '''
         for self.u in self.udevinfo:
-            self.v = self.u.split('=')
-            self.dict_udevinfo[self.v[0]] = self.v[1]
+            if '=' in self.u:
+                self.v = self.u.split('=')
+                self.dict_udevinfo[self.v[0]] = self.v[1]
+            else:
+                continue
 
         return self.dict_udevinfo
 

@@ -261,12 +261,12 @@ p, li { white-space: pre-wrap; }
         <translation>Dateisystem</translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="32"/>
+        <location filename="src/write_to_gui.py" line="33"/>
         <source>Format with</source>
         <translation>formatieren mit</translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="33"/>
+        <location filename="src/write_to_gui.py" line="32"/>
         <source>Format</source>
         <translation>Formatieren</translation>
     </message>

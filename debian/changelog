@@ -20,5 +20,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * rm *.pyc 
   * su to su-to-root changed 
   * add only neede rows to tableWidget 
+  * changed to subprocess
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 09:35:02 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 14:00:27 +0200

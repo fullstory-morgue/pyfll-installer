@@ -6,10 +6,12 @@ __license__   = 'GPLv2 or any later version'
 
 
 import os
-import commands
 import sys
-from configobj import ConfigObj
+from subprocess import *
 
+
+
+from configobj import ConfigObj
 from PyQt4 import QtCore, QtGui
 
 # own classes
@@ -19,8 +21,9 @@ from src.write_to_gui import *
 from src.callback import *
 from src.disk import *
 
+
 # files
-conf_file = "pyfll-installer.conf"
+CONF_FILE = "pyfll-installer.conf"
 
 
 class Error(Exception):
@@ -29,11 +32,11 @@ class Error(Exception):
 
 
 class FLLInstaller(object):
-    def __init__(self, conf_file):
-        self.conf_file = conf_file
+    def __init__(self, CONF_FILE):
+        self.CONF_FILE = CONF_FILE
 
         ''' read config file and write values to widgets '''
-        self.cfile = ConfigObj(self.conf_file)
+        self.cfile = ConfigObj(self.CONF_FILE)
         self.tzfile = self.cfile['timezone']['tz_file']
 
     def default_text(self):
@@ -109,11 +112,19 @@ class FLLInstaller(object):
                 self.wg = Write_to_gui(self.ui, 'comboBox_partition')
                 self.wg.text_to_combobox(self.dev.split())
             else:
-                self.fdisk_l = commands.getoutput('fdisk -l %s' % (self.dev)).split('\n')
+                ''' fdisk -l '''
+                self.cmd = ['fdisk', '-l', self.dev]
+
+                self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+                self.fdisk_l = self.c.communicate()[0]
+                if not self.c.returncode == 0:
+                    print 'Error: %s' % ( ' '.join(self.cmd) )
+
+                ''' if fdisk -l empty, goto next '''
                 if len(self.fdisk_l) < 2:
                     # if partition is extended do noting
-                    print self.fdisk_l
                     continue
+
 
                 ''' partitions to table tableWidget_mountpoints '''
                 self.wg = Write_to_gui(self.ui, 'tableWidget_mountpoints')
@@ -154,9 +165,7 @@ class FLLInstaller(object):
 
 
     def main(self):
-        ''' root '''
-        self.user_id = commands.getoutput('getent passwd ${USER} | cut -d\: -f3')
-        if self.user_id != "0":
+        if os.getenv("USER", default=None) != "root":
             print "Requires root!"
             sys.exit(1)
 
@@ -202,7 +211,7 @@ class FLLInstaller(object):
 #
 if __name__ == "__main__":
     try:
-        fll = FLLInstaller(conf_file)
+        fll = FLLInstaller(CONF_FILE)
         fll.main()
     except KeyboardInterrupt:
         pass
