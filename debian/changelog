@@ -18,5 +18,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * bash start script added 
   * build script to bash 
   * rm *.pyc 
+  * su to su-to-root changed 
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 22 Apr 2008 21:04:45 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 08:26:44 +0200

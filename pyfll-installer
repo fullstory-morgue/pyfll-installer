@@ -34,14 +34,14 @@ for arg in "${@}"; do
 done
 
 # compile py files
-python -m compileall .
-python -m compileall src
+python -m compileall . > /dev/null
+python -m compileall src > /dev/null
 
 
 if [ "${ROOTEXEC}" = yes ]; then
 	echo "Requires root!"
 	ROOT_CMD="/usr/bin/python ${FLL} --uid ${USER_UID} --gid ${USER_GID} ${@}"
-	exec su root --command "${ROOT_CMD}"
+	exec su-to-root -X -c "${ROOT_CMD}"
 else
 	exec /usr/bin/python ${FLL} ${@}
 fi
