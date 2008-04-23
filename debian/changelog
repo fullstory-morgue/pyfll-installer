@@ -19,5 +19,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * build script to bash 
   * rm *.pyc 
   * su to su-to-root changed 
+  * add only neede rows to tableWidget 
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 08:26:44 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 09:35:02 +0200

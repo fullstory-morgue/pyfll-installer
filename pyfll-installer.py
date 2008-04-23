@@ -88,7 +88,7 @@ class FLLInstaller(object):
         '''
         comboBox_partition and tableWidget_mountpoints
         '''
-        self.row     = 20
+        self.row     = Diskinfo().partition_count()
         self.column  = 6
         self.place_x = 0
         self.place   = []
@@ -130,13 +130,13 @@ class FLLInstaller(object):
                 else:
                     self.wg.labeltext_to_table(self.place, "")
 
-                ''' 3. column in tableWidget = Format_with '''
-                self.place = [ self.place[0], 2]
-                self.wg.combobox_to_table(self.place, self.cfile['filesystem']['supported'].split())
-
-                ''' 4. column in tableWidget = checkbox format=0|1 '''
-                self.place = [ self.place[0], 3 ]
+                ''' 3. column in tableWidget = checkbox format=0|1 '''
+                self.place = [ self.place[0], 2 ]
                 self.wg.checkbox_to_table(self.place)
+
+                ''' 4. column in tableWidget = Format_with '''
+                self.place = [ self.place[0], 3]
+                self.wg.combobox_to_table(self.place, self.cfile['filesystem']['supported'].split())
 
                 ''' 5. column in tableWidget = mountpoint '''
                 self.place = [ self.place[0], 4]

@@ -29,8 +29,8 @@ class Write_to_gui(object):
         [
         QtGui.QApplication.translate("TableEditor", "Partition", None, QtGui.QApplication.UnicodeUTF8),
         QtGui.QApplication.translate("TableEditor", "Filesystem", None, QtGui.QApplication.UnicodeUTF8),
-        QtGui.QApplication.translate("TableEditor", "Format with", None, QtGui.QApplication.UnicodeUTF8),
         QtGui.QApplication.translate("TableEditor", "Format", None, QtGui.QApplication.UnicodeUTF8),
+        QtGui.QApplication.translate("TableEditor", "Format with", None, QtGui.QApplication.UnicodeUTF8),
         QtGui.QApplication.translate("TableEditor", "Mountpoint", None, QtGui.QApplication.UnicodeUTF8),
         QtGui.QApplication.translate("TableEditor", "UUID", None, QtGui.QApplication.UnicodeUTF8)
         ]

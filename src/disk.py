@@ -53,3 +53,17 @@ class Diskinfo(object):
             self.dict_udevinfo[self.v[0]] = self.v[1]
 
         return self.dict_udevinfo
+
+
+    def partition_count(self):
+        '''
+        count partitions
+        '''
+        self.count = -1
+
+        for self.dev in self.partitions():
+            if Diskinfo().udevinfo(self.dev).get('TYP') == 'partition':
+                self.count = self.count + 1
+
+        return self.count
+
