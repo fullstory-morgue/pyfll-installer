@@ -108,15 +108,16 @@ class FLLInstaller(object):
         for self.dev in Diskinfo().partitions():
             if Diskinfo().udevinfo(self.dev).get('TYP') == 'disk':
                 '''
-                disks ( /dev/sda1, /dev/sda2, ...)
+                disks ( /dev/sda, /dev/sda, ...)
                 '''
 
                 ''' comboBox_partition (gparted, fdisk, cfdisk start) '''
                 self.wg = Write_to_gui(self.ui, 'comboBox_partition')
                 self.wg.text_to_combobox(self.dev.split())
 
-                ''' comboBox_installtarget ( mbr, partition, /dev/sda, ...
-                [wihtout usb partitions] '''
+                ''' add disks to comboBox_installtarget
+                mbr, partition is set in configfile.
+                ( mbr, partition, /dev/sda, ... [wihtout usb partitions] '''
                 if Diskinfo().udevinfo(self.dev).get('ID_BUS') != "usb":
                     self.wg = Write_to_gui(self.ui, 'comboBox_installtarget')
                     self.wg.text_to_combobox(self.dev.split())
