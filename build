@@ -5,5 +5,5 @@ pylupdate4 pyfll-installer.pro
 pyrcc4 -o res_rc.py ui/res.qrc
 
 # compile py files
-python -m compileall .
-python -m compileall src
+#python -m compileall .
+#python -m compileall src

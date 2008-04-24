@@ -107,11 +107,25 @@ class FLLInstaller(object):
         self.place = [ -1, 1 ]
         for self.dev in Diskinfo().partitions():
             if Diskinfo().udevinfo(self.dev).get('TYP') == 'disk':
-                ''' disks comboBox_partition '''
+                '''
+                disks ( /dev/sda1, /dev/sda2, ...)
+                '''
 
+                ''' comboBox_partition (gparted, fdisk, cfdisk start) '''
                 self.wg = Write_to_gui(self.ui, 'comboBox_partition')
                 self.wg.text_to_combobox(self.dev.split())
+
+                ''' comboBox_installtarget ( mbr, partition, /dev/sda, ...
+                [wihtout usb partitions] '''
+                if Diskinfo().udevinfo(self.dev).get('ID_BUS') != "usb":
+                    self.wg = Write_to_gui(self.ui, 'comboBox_installtarget')
+                    self.wg.text_to_combobox(self.dev.split())
+
             else:
+                '''
+                partitions ( /dev/sda1, /dev/sda2, ...)
+                '''
+
                 ''' fdisk -l '''
                 self.cmd = ['fdisk', '-l', self.dev]
 
@@ -120,9 +134,8 @@ class FLLInstaller(object):
                 if not self.c.returncode == 0:
                     print 'Error: %s' % ( ' '.join(self.cmd) )
 
-                ''' if fdisk -l empty, goto next '''
+                ''' if fdisk -l empty, goto next [extended partitions]'''
                 if len(self.fdisk_l) < 2:
-                    # if partition is extended do noting
                     continue
 
 

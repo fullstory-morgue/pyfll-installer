@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui/mainwindow.ui'
 #
-# Created: Wed Apr 23 11:48:05 2008
+# Created: Thu Apr 24 12:51:20 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -351,7 +351,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.start)
 
         self.disclaimer = QtGui.QWidget()
-        self.disclaimer.setGeometry(QtCore.QRect(2,2,615,394))
+        self.disclaimer.setGeometry(QtCore.QRect(2,2,615,403))
         self.disclaimer.setObjectName("disclaimer")
 
         self.gridlayout1 = QtGui.QGridLayout(self.disclaimer)
@@ -390,7 +390,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.disclaimer)
 
         self.partition = QtGui.QWidget()
-        self.partition.setGeometry(QtCore.QRect(2,2,615,394))
+        self.partition.setGeometry(QtCore.QRect(2,2,615,403))
         self.partition.setObjectName("partition")
 
         self.gridlayout3 = QtGui.QGridLayout(self.partition)
@@ -538,7 +538,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.partition)
 
         self.mountpoints = QtGui.QWidget()
-        self.mountpoints.setGeometry(QtCore.QRect(2,2,615,394))
+        self.mountpoints.setGeometry(QtCore.QRect(2,2,615,403))
         self.mountpoints.setObjectName("mountpoints")
 
         self.gridlayout8 = QtGui.QGridLayout(self.mountpoints)
@@ -580,13 +580,13 @@ class Ui_MainWindow(object):
         spacerItem7 = QtGui.QSpacerItem(16,20,QtGui.QSizePolicy.Preferred,QtGui.QSizePolicy.Minimum)
         self.gridlayout9.addItem(spacerItem7,0,2,2,1)
 
-        self.comboBox_mountpoints = QtGui.QComboBox(self.mountpoints)
+        self.comboBox_installtarget = QtGui.QComboBox(self.mountpoints)
 
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.comboBox_mountpoints.setFont(font)
-        self.comboBox_mountpoints.setObjectName("comboBox_mountpoints")
-        self.gridlayout9.addWidget(self.comboBox_mountpoints,1,1,1,1)
+        self.comboBox_installtarget.setFont(font)
+        self.comboBox_installtarget.setObjectName("comboBox_installtarget")
+        self.gridlayout9.addWidget(self.comboBox_installtarget,1,1,1,1)
         self.gridlayout8.addLayout(self.gridlayout9,0,1,1,1)
 
         self.gridlayout10 = QtGui.QGridLayout()
