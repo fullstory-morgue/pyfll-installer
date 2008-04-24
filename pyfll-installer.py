@@ -209,13 +209,5 @@ class FLLInstaller(object):
 #
 # main
 #
-if __name__ == "__main__":
-    try:
-        fll = FLLInstaller(CONF_FILE)
-        fll.main()
-    except KeyboardInterrupt:
-        pass
-    except Error:
-        sys.exit(1)
-
-
+fll = FLLInstaller(CONF_FILE)
+fll.main()

@@ -22,5 +22,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * add only neede rows to tableWidget 
   * changed to subprocess
   * changed to subprocess in callbacks.py 
+  * main part striped (segmentation fault) 
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 23 Apr 2008 21:15:08 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Thu, 24 Apr 2008 11:33:36 +0200
