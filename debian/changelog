@@ -26,5 +26,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * add hd devices to comboBox_installplace 
   * typo
   * label widget with html link removed (SEGFAULT) 
+  * main.py added 
 
- -- Horst Tritremmel <hjt@sidux.com>  Fri, 25 Apr 2008 10:03:17 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Fri, 25 Apr 2008 10:21:37 +0200
