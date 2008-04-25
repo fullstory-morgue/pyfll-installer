@@ -14,11 +14,11 @@ from configobj import ConfigObj
 from PyQt4 import QtCore, QtGui
 
 # own classes
-from src.ui_mainwindow import Ui_MainWindow
-from src.translations import *
-from src.write_to_gui import *
-from src.callback import *
-from src.disk import *
+from ui_mainwindow import Ui_MainWindow
+from translations import *
+from write_to_gui import *
+from callback import *
+from disk import *
 
 
 
@@ -28,7 +28,7 @@ class FLLInstaller(object):
 
         ''' read config file and write values to widgets '''
         self.cfile = ConfigObj(self.CONF_FILE)
-        self.tzfile = self.cfile['timezone']['tz_file']
+
 
     def default_text(self):
         '''
@@ -41,16 +41,6 @@ class FLLInstaller(object):
         '''
         self.wg = Write_to_gui(self.ui, "label_start")
         self.wg.text_to_singleline(str(self.t.label_start()))
-
-        '''
-        label_timezone
-        '''
-        self.file = open(self.tzfile)
-        self.tz = self.file.readline()
-        self.file.close()
-
-        self.wg = Write_to_gui(self.ui, "label_timezone")
-        self.wg.text_to_singleline(r'<span style=" font-size:10pt; font-weight:600;">%s</span>' % (str(self.tz)) )
 
 
     def read_config(self):
@@ -156,10 +146,6 @@ class FLLInstaller(object):
 
 
     def main(self):
-        if os.getenv("USER", default=None) != "root":
-            print "Requires root!"
-            sys.exit(1)
-
         '''
         set ui
         '''
@@ -184,14 +170,42 @@ class FLLInstaller(object):
         self.read_config()
         self.partition_start()
 
+        '''
+        Timezone to label
+        '''
+        self.timezone = Timezone(self.ui, self.CONF_FILE)
+        self.timezone.label_timezone()
 
         '''
         callbacks from ui
         '''
-        self.cb = Callback(self.ui)
+        self.cb = Callback(self.ui, self.timezone)
 
         """
         show MainWindow
         """
         self.MainWindow.show()
         sys.exit(self.app.exec_())
+
+
+class Timezone(object):
+    ''' Timezone class.'''
+    def __init__(self, ui, CONFFILE):
+        self.ui = ui
+        self.CONFFILE = CONFFILE
+
+        ''' read config file and write values to widgets '''
+        self.conf = ConfigObj(self.CONFFILE)
+        self.tzfile = self.conf['timezone']['tz_file']
+
+    def label_timezone(self):
+        pass
+        '''
+        label_timezone
+        '''
+        self.file = open(self.tzfile)
+        self.tz = self.file.readline()
+        self.file.close()
+
+        self.wg = Write_to_gui(self.ui, "label_timezone")
+        self.wg.text_to_singleline(r'<span style=" font-size:10pt; font-weight:600;">%s</span>' % (str(self.tz)) )

@@ -6,14 +6,17 @@ __license__   = 'GPLv2 or any later version'
 
 from PyQt4 import QtCore, QtGui
 from subprocess import *
+#from main import Timezone
 
 #
 # read from gui (callbacks)
 #
 class Callback(QtGui.QMainWindow):
-    def __init__(self, ui):
+    def __init__(self, ui, timezone):
         ''' handle callbacks '''
-        self.ui = ui
+        self.ui  = ui
+        self.tz  = timezone
+
         QtGui.QWidget.__init__(self)
 
         ''' switch stack widget '''
@@ -28,6 +31,8 @@ class Callback(QtGui.QMainWindow):
         ''' start partiton tool '''
         QtCore.QObject.connect(self.ui.pushButton_patition,QtCore.SIGNAL("clicked()"), self.run_partition_tool)
 
+        ''' start timezone selection '''
+        QtCore.QObject.connect(self.ui.pushButton_timezone,QtCore.SIGNAL("clicked()"), self.run_timezone)
 
     def read(self):
         print "comboBox_bootloader: " + self.ui.comboBox_bootloader.currentText()
@@ -84,3 +89,25 @@ class Callback(QtGui.QMainWindow):
             print self.c.communicate()[0]
             if not self.c.returncode == 0:
                 print 'Error: %s' % ( ' '.join(self.cmd) )
+
+
+    def run_timezone(self):
+        '''
+        close_me=0
+        $(dpkg -l | grep libqt-perl) ] && close_me=1 && \
+                       DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata
+        [ "${close_me}" = 1 ] && exit
+
+        [ "$(dpkg -l | grep libgnome2-perl)" ] && close_me=1 && \
+                       DEBIAN_FRONTEND=gnome dpkg-reconfigure tzdata
+        [ "${close_me}" = 1 ] && exit
+        '''
+
+        print 'start dpkg-reconfigure tzdata'
+        self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
+        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+        print self.c.communicate()[0]
+        if not self.c.returncode == 0:
+            print 'Error: %s' % ( ' '.join(self.cmd) )
+
+        self.tz.label_timezone()
