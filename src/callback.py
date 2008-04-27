@@ -92,19 +92,21 @@ class Callback(QtGui.QMainWindow):
 
 
     def run_timezone(self):
+        self.i = ''
         '''
-        close_me=0
-        $(dpkg -l | grep libqt-perl) ] && close_me=1 && \
-                       DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata
-        [ "${close_me}" = 1 ] && exit
-
-        [ "$(dpkg -l | grep libgnome2-perl)" ] && close_me=1 && \
-                       DEBIAN_FRONTEND=gnome dpkg-reconfigure tzdata
-        [ "${close_me}" = 1 ] && exit
+        dpkg -l | grep libqt-perl
+        dpkg -l | grep libgnome2-perl
         '''
+        if self.i == 'qt':
+            print 'start DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
+            self.cmd = ['DEBIAN_FRONTEND=kde', 'dpkg-reconfigure', 'tzdata']
+        elif self.i == 'gtk':
+            print 'start DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
+            self.cmd = ['DEBIAN_FRONTEND=gnome', 'dpkg-reconfigure', 'tzdata']
+        else:
+            print 'start dpkg-reconfigure tzdata'
+            self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
 
-        print 'start dpkg-reconfigure tzdata'
-        self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
         self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
         print self.c.communicate()[0]
         if not self.c.returncode == 0:

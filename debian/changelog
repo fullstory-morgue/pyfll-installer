@@ -28,5 +28,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * label widget with html link removed (SEGFAULT) 
   * main.py added
   * Button tzdata 
+  * tz test 
 
- -- Horst Tritremmel <hjt@sidux.com>  Fri, 25 Apr 2008 12:54:20 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Sun, 27 Apr 2008 21:04:14 +0200
