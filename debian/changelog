@@ -29,5 +29,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * main.py added
   * Button tzdata 
   * tz test 
+  * add hd devices to comboBox_installplace again 
 
- -- Horst Tritremmel <hjt@sidux.com>  Sun, 27 Apr 2008 21:04:14 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Sun, 27 Apr 2008 21:31:41 +0200
