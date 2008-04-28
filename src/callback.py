@@ -88,41 +88,41 @@ class Callback(QtGui.QMainWindow):
     def run_timezone(self):
         self.i = ''
 
-        ''' libqt-perl installed? '''
-        self.cmd = ['dpkg', '--get-selections', 'libqt-perl' ]
-        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
-        if str(self.c.communicate()[0].split()[1]) == 'install':
-            self.i = 'qt'
-        if not self.c.returncode == 0:
-            print 'Error: %s' % ( ' '.join(self.cmd) )
+        ''' libqt-perl or libgnome2-perl installed? '''
+        #self.tzdeb = ['libqt-perl', 'libgnome2-perl']
+        self.tzdeb = ['libqt-perl']
+        for self.t in self.tzdeb:
+            self.cmd = ['dpkg', '--get-selections', 'libqt-perl']
+            print self.cmd
+            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+            self.out = self.c.communicate()[0]
 
-        ''' libgnome2-perl installed? '''
-        self.cmd = ['dpkg', '--get-selections', 'libgnome2-perl' ]
-        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
-        if str(self.c.communicate()[0].split()[1]) == 'install':
-            self.i = 'gtk'
-        if not self.c.returncode == 0:
-            print 'Error: %s' % ( ' '.join(self.cmd) )
+            if len(self.out) > 0:
+                if str(self.out.split()[1]) == 'install':
+                    self.i = self.t
+                    continue
+            if not self.c.returncode == 0:
+                print 'Error: %s' % ( ' '.join(self.cmd) )
 
 
         ''' start tzdata '''
-        if self.i == 'qt':
+        self.cmd = ['dpkg-reconfigure', 'tzdata']
+        self.env = os.environ.copy()
+
+        if self.i == 'libqt-perl':
             print 'DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
-            self.cmd = ['dpkg-reconfigure', 'tzdata']
-            self.env = os.environ.copy()
             self.env["DEBIAN_FRONTEND"] = "kde"
-        elif self.i == 'gtk':
+        elif self.i == 'libgnome2-perl':
             print 'DEBIAN_FRONTEND=gnome dpkg-reconfigure tzdata'
-            self.cmd = ['dpkg-reconfigure', 'tzdata']
-            self.env = os.environ.copy()
             self.env["DEBIAN_FRONTEND"] = "gnome"
         else:
             print 'dpkg-reconfigure tzdata'
             self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
-            self.env = os.environ.copy()
+
 
         self.c = Popen(self.cmd, env = self.env, stdout = PIPE, stderr = STDOUT, close_fds = True)
-        print self.c.communicate()[0]
+        self.out = self.c.communicate()[0]
+        print self.out
         if not self.c.returncode == 0:
             print 'Error: %s' % ( ' '.join(self.cmd) )
 
