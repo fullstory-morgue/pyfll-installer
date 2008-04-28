@@ -4,6 +4,7 @@ __author__    = 'Horst Tritremmel'
 __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
+import os
 from PyQt4 import QtCore, QtGui
 from subprocess import *
 #from main import Timezone
@@ -69,45 +70,58 @@ class Callback(QtGui.QMainWindow):
         if self.ui.radioButton_gparted.isChecked():
             print 'start %s with gparted' % (self.device)
             self.cmd = ['gparted', self.device]
-            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
-            print self.c.communicate()[0]
-            if not self.c.returncode == 0:
-                print 'Error: %s' % ( ' '.join(self.cmd) )
 
         if self.ui.radioButton_cfdisk.isChecked():
             print 'start %s with cfdisk' % (self.device)
             self.cmd = ['x-terminal-emulator', '-e', 'cfdisk', self.device]
-            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
-            print self.c.communicate()[0]
-            if not self.c.returncode == 0:
-                print 'Error: %s' % ( ' '.join(self.cmd) )
 
         if self.ui.radioButton_fdisk.isChecked():
             print 'start %s with fdisk' % (self.device)
             self.cmd = ['x-terminal-emulator', '-e', 'fdisk', self.device]
-            self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
-            print self.c.communicate()[0]
-            if not self.c.returncode == 0:
-                print 'Error: %s' % ( ' '.join(self.cmd) )
+
+        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+        print self.c.communicate()[0]
+        if not self.c.returncode == 0:
+            print 'Error: %s' % ( ' '.join(self.cmd) )
 
 
     def run_timezone(self):
         self.i = ''
-        '''
-        dpkg -l | grep libqt-perl
-        dpkg -l | grep libgnome2-perl
-        '''
-        if self.i == 'qt':
-            print 'start DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
-            self.cmd = ['DEBIAN_FRONTEND=kde', 'dpkg-reconfigure', 'tzdata']
-        elif self.i == 'gtk':
-            print 'start DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
-            self.cmd = ['DEBIAN_FRONTEND=gnome', 'dpkg-reconfigure', 'tzdata']
-        else:
-            print 'start dpkg-reconfigure tzdata'
-            self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
 
+        ''' libqt-perl installed? '''
+        self.cmd = ['dpkg', '--get-selections', 'libqt-perl' ]
         self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+        if str(self.c.communicate()[0].split()[1]) == 'install':
+            self.i = 'qt'
+        if not self.c.returncode == 0:
+            print 'Error: %s' % ( ' '.join(self.cmd) )
+
+        ''' libgnome2-perl installed? '''
+        self.cmd = ['dpkg', '--get-selections', 'libgnome2-perl' ]
+        self.c = Popen(self.cmd, stdout = PIPE, stderr = STDOUT, close_fds = True)
+        if str(self.c.communicate()[0].split()[1]) == 'install':
+            self.i = 'gtk'
+        if not self.c.returncode == 0:
+            print 'Error: %s' % ( ' '.join(self.cmd) )
+
+
+        ''' start tzdata '''
+        if self.i == 'qt':
+            print 'DEBIAN_FRONTEND=kde dpkg-reconfigure tzdata'
+            self.cmd = ['dpkg-reconfigure', 'tzdata']
+            self.env = os.environ.copy()
+            self.env["DEBIAN_FRONTEND"] = "kde"
+        elif self.i == 'gtk':
+            print 'DEBIAN_FRONTEND=gnome dpkg-reconfigure tzdata'
+            self.cmd = ['dpkg-reconfigure', 'tzdata']
+            self.env = os.environ.copy()
+            self.env["DEBIAN_FRONTEND"] = "gnome"
+        else:
+            print 'dpkg-reconfigure tzdata'
+            self.cmd = ['x-terminal-emulator', '-e', 'dpkg-reconfigure', 'tzdata']
+            self.env = os.environ.copy()
+
+        self.c = Popen(self.cmd, env = self.env, stdout = PIPE, stderr = STDOUT, close_fds = True)
         print self.c.communicate()[0]
         if not self.c.returncode == 0:
             print 'Error: %s' % ( ' '.join(self.cmd) )

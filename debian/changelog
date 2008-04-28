@@ -30,5 +30,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * Button tzdata 
   * tz test 
   * add hd devices to comboBox_installplace again 
+  * Timezone button ready now 
 
- -- Horst Tritremmel <hjt@sidux.com>  Sun, 27 Apr 2008 21:31:41 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Mon, 28 Apr 2008 10:27:41 +0200
