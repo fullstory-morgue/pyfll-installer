@@ -6,6 +6,9 @@ __license__   = 'GPLv2 or any later version'
 
 from PyQt4 import QtCore, QtGui
 
+def table_callback():
+    print "table callback test"
+
 
 #
 # write to gui
@@ -52,8 +55,12 @@ class Write_to_gui(object):
 
     def checkbox_to_table(self, place):
         ''' add Checkbox to tableWidget '''
-        self.check_box = QtGui.QCheckBox()
-        self.widget.setCellWidget(place[0], place[1], self.check_box)
+        self.checkBox = QtGui.QCheckBox()
+        self.checkBox.setObjectName("checkBox")
+        QtCore.QObject.connect(self.checkBox,QtCore.SIGNAL("toggled(bool)"), table_callback )
+
+        self.widget.setCellWidget(place[0], place[1], self.checkBox)
+        self.labeltext_to_table(place, '')
 
     def combobox_to_table(self, place, text):
         ''' add combobox to tableWidget '''

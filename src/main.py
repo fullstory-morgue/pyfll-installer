@@ -89,7 +89,7 @@ class FLLInstaller(object):
         for self.dev in Diskinfo().partitions():
             if Diskinfo().udevinfo(self.dev).get('TYP') == 'disk':
                 '''
-                disks ( /dev/sda1, /dev/sda2, ...)
+                disks ( /dev/sda, /dev/sdb, ...)
                 '''
 
                 ''' comboBox_partition (gparted, fdisk, cfdisk start) '''
