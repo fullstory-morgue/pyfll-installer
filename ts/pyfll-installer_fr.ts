@@ -8,32 +8,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1663"/>
+        <location filename="ui/mainwindow.ui" line="1666"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1604"/>
+        <location filename="ui/mainwindow.ui" line="1607"/>
         <source>&amp;Prev</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1619"/>
+        <location filename="ui/mainwindow.ui" line="1622"/>
         <source>&amp;Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1648"/>
+        <location filename="ui/mainwindow.ui" line="1651"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1654"/>
+        <location filename="ui/mainwindow.ui" line="1657"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1668"/>
+        <location filename="ui/mainwindow.ui" line="1671"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48,87 +48,87 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="451"/>
+        <location filename="ui/mainwindow.ui" line="454"/>
         <source>&amp;gparted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="475"/>
+        <location filename="ui/mainwindow.ui" line="478"/>
         <source>&amp;cfdisk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="493"/>
+        <location filename="ui/mainwindow.ui" line="496"/>
         <source>&amp;fdisk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="511"/>
+        <location filename="ui/mainwindow.ui" line="514"/>
         <source>&amp;Start gparted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="700"/>
+        <location filename="ui/mainwindow.ui" line="703"/>
         <source>Set mountpoints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="528"/>
+        <location filename="ui/mainwindow.ui" line="531"/>
         <source>create a bootdisk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1353"/>
+        <location filename="ui/mainwindow.ui" line="1356"/>
         <source>Timezone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="796"/>
+        <location filename="ui/mainwindow.ui" line="799"/>
         <source>Root-password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="836"/>
+        <location filename="ui/mainwindow.ui" line="839"/>
         <source>Root-password again:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="883"/>
+        <location filename="ui/mainwindow.ui" line="886"/>
         <source>Realname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1151"/>
+        <location filename="ui/mainwindow.ui" line="1154"/>
         <source>Hostname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1221"/>
+        <location filename="ui/mainwindow.ui" line="1224"/>
         <source>start services</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="923"/>
+        <location filename="ui/mainwindow.ui" line="926"/>
         <source>Username:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="963"/>
+        <location filename="ui/mainwindow.ui" line="966"/>
         <source>Password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1003"/>
+        <location filename="ui/mainwindow.ui" line="1006"/>
         <source>Password again:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1232"/>
+        <location filename="ui/mainwindow.ui" line="1235"/>
         <source>cupsys (Printing System)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1247"/>
+        <location filename="ui/mainwindow.ui" line="1250"/>
         <source>ssh (Secure shell server and client)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -138,12 +138,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="ui/mainwindow.ui" line="1489"/>
+        <location filename="ui/mainwindow.ui" line="1492"/>
         <source>lölöl</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="628"/>
+        <location filename="ui/mainwindow.ui" line="631"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -176,7 +176,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="770"/>
+        <location filename="ui/mainwindow.ui" line="773"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -185,7 +185,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui/mainwindow.ui" line="1092"/>
+        <location filename="ui/mainwindow.ui" line="1095"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -197,32 +197,32 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>TableEditor</name>
     <message>
-        <location filename="src/write_to_gui.py" line="30"/>
+        <location filename="src/write_to_gui.py" line="38"/>
         <source>Partition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="31"/>
+        <location filename="src/write_to_gui.py" line="39"/>
         <source>Filesystem</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="33"/>
+        <location filename="src/write_to_gui.py" line="41"/>
         <source>Format with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="32"/>
+        <location filename="src/write_to_gui.py" line="40"/>
         <source>Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="34"/>
+        <location filename="src/write_to_gui.py" line="42"/>
         <source>Mountpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/write_to_gui.py" line="38"/>
+        <location filename="src/write_to_gui.py" line="46"/>
         <source>UUID</source>
         <translation type="unfinished"></translation>
     </message>
@@ -230,12 +230,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>gettxt</name>
     <message>
-        <location filename="src/translations.py" line="20"/>
+        <location filename="src/translations.py" line="23"/>
         <source>not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/translations.py" line="28"/>
+        <location filename="src/translations.py" line="31"/>
         <source>This wizard will help you to install the live distribution.</source>
         <translation type="unfinished"></translation>
     </message>

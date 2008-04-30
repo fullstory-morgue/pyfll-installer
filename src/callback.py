@@ -7,21 +7,19 @@ __license__   = 'GPLv2 or any later version'
 import os
 from PyQt4 import QtCore, QtGui
 from subprocess import *
-#from main import Timezone
 
 #
 # read from gui (callbacks)
 #
-class Callback(QtGui.QMainWindow):
+class Callback(object):   #QtGui.QMainWindow
     def __init__(self, ui, timezone):
         ''' handle callbacks '''
+        #print "class Callback __init__"
+
         self.ui  = ui
         self.tz  = timezone
 
-        QtGui.QWidget.__init__(self)
-
         ''' switch stack widget '''
-        #QtCore.QObject.connect(self.ui.pushButton_print,QtCore.SIGNAL("clicked()"), self.read)
         QtCore.QObject.connect(self.ui.pushButton_next,QtCore.SIGNAL("clicked()"), self.next)
         QtCore.QObject.connect(self.ui.pushButton_prev,QtCore.SIGNAL("clicked()"), self.prev)
         QtCore.QObject.connect(self.ui.stackedWidget,QtCore.SIGNAL("currentChanged(int)"), self.stack_switched)
@@ -35,11 +33,11 @@ class Callback(QtGui.QMainWindow):
         ''' start timezone selection '''
         QtCore.QObject.connect(self.ui.pushButton_timezone,QtCore.SIGNAL("clicked()"), self.run_timezone)
 
-    def read(self):
-        print "comboBox_bootloader: " + self.ui.comboBox_bootloader.currentText()
+    #def read(self):
+    #    print "comboBox_bootloader: " + self.ui.comboBox_bootloader.currentText()
 
-        w = self.ui.tableWidget1.cellWidget(0, 1)
-        print "cell (0, 1) from table1: " + w.currentText()
+    #    w = self.ui.tableWidget1.cellWidget(0, 1)
+    #    print "cell (0, 1) from table1: " + w.currentText()
 
 
     def next(self):
@@ -127,3 +125,4 @@ class Callback(QtGui.QMainWindow):
             print 'Error: %s' % ( ' '.join(self.cmd) )
 
         self.tz.label_timezone()
+

@@ -8,8 +8,6 @@ import os
 import sys
 from subprocess import *
 
-
-
 from configobj import ConfigObj
 from PyQt4 import QtCore, QtGui
 
@@ -21,9 +19,10 @@ from callback import *
 from disk import *
 
 
-
 class FLLInstaller(object):
     def __init__(self, CONF_FILE):
+        print 'class FLLInstaller __init__'
+
         self.CONF_FILE = CONF_FILE
 
         ''' read config file and write values to widgets '''
@@ -72,7 +71,7 @@ class FLLInstaller(object):
         '''
         comboBox_partition and tableWidget_mountpoints
         '''
-        self.row     = Diskinfo().partition_count()
+        self.row     = Diskinfo().partition_count() + 1
         self.column  = 6
         self.place_x = 0
         self.place   = []
@@ -167,6 +166,10 @@ class FLLInstaller(object):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
 
+        '''
+        show MainWindow
+        '''
+        self.MainWindow.show()
 
         '''
         start translation
@@ -194,10 +197,6 @@ class FLLInstaller(object):
         '''
         self.cb = Callback(self.ui, self.timezone)
 
-        """
-        show MainWindow
-        """
-        self.MainWindow.show()
         sys.exit(self.app.exec_())
 
 

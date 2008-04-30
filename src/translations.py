@@ -13,8 +13,11 @@ from PyQt4.QtCore import QTranslator
 #
 # internationalisation strings
 #
-class Gettxt(QtCore.QObject):
+class Gettxt(object):
     ''' translateable strings '''
+    def __init__(self):
+        print 'class Gettxt __init__'
+
     def not_found(self):
         return QtCore.QCoreApplication.translate("gettxt", "not found")
     def label_start(self):
@@ -26,6 +29,8 @@ class Gettxt(QtCore.QObject):
 #
 class Gettxt_gui(object):
     def __init__(self, ui, MainWindow, app):
+        print 'class Gettxt_gui __init__'
+
         self.ui = ui
         self.MainWindow = MainWindow
         self.app = app

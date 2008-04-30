@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui/mainwindow.ui'
 #
-# Created: Fri Apr 25 10:00:53 2008
+# Created: Wed Apr 30 14:42:46 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -196,6 +196,7 @@ class Ui_MainWindow(object):
         self.gridlayout7.setObjectName("gridlayout7")
 
         self.comboBox_partition = QtGui.QComboBox(self.groupBox)
+        self.comboBox_partition.setEnabled(True)
 
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -352,7 +353,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.mountpoints)
 
         self.password = QtGui.QWidget()
-        self.password.setGeometry(QtCore.QRect(2,2,615,394))
+        self.password.setGeometry(QtCore.QRect(2,2,615,403))
         self.password.setObjectName("password")
 
         self.gridlayout11 = QtGui.QGridLayout(self.password)
@@ -544,7 +545,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.password)
 
         self.hostname = QtGui.QWidget()
-        self.hostname.setGeometry(QtCore.QRect(2,2,615,394))
+        self.hostname.setGeometry(QtCore.QRect(2,2,615,403))
         self.hostname.setObjectName("hostname")
 
         self.gridlayout13 = QtGui.QGridLayout(self.hostname)
@@ -723,7 +724,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.hostname)
 
         self.progress = QtGui.QWidget()
-        self.progress.setGeometry(QtCore.QRect(2,2,615,394))
+        self.progress.setGeometry(QtCore.QRect(2,2,615,403))
         self.progress.setObjectName("progress")
 
         self.gridlayout18 = QtGui.QGridLayout(self.progress)

@@ -427,6 +427,9 @@ p, li { white-space: pre-wrap; }
               <layout class="QGridLayout" >
                <item row="0" column="0" >
                 <widget class="QComboBox" name="comboBox_partition" >
+                 <property name="enabled" >
+                  <bool>true</bool>
+                 </property>
                  <property name="font" >
                   <font>
                    <pointsize>10</pointsize>
@@ -717,7 +720,7 @@ p, li { white-space: pre-wrap; }
          <x>2</x>
          <y>2</y>
          <width>615</width>
-         <height>394</height>
+         <height>403</height>
         </rect>
        </property>
        <layout class="QGridLayout" >
@@ -1039,7 +1042,7 @@ p, li { white-space: pre-wrap; }
          <x>2</x>
          <y>2</y>
          <width>615</width>
-         <height>394</height>
+         <height>403</height>
         </rect>
        </property>
        <layout class="QGridLayout" >
@@ -1399,7 +1402,7 @@ p, li { white-space: pre-wrap; }
          <x>2</x>
          <y>2</y>
          <width>615</width>
-         <height>394</height>
+         <height>403</height>
         </rect>
        </property>
        <layout class="QGridLayout" >

@@ -5,9 +5,11 @@ __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
 from PyQt4 import QtCore, QtGui
+from callback import *
 
-def table_callback():
-    print "table callback test"
+
+TABLEWIDGET_CHECKBOX_NAME = 'tableWidget_checkBox'
+FORMAT_WITH_COMBO_COLUMN  = 3
 
 
 #
@@ -17,12 +19,16 @@ class Write_to_gui(object):
     '''
     write values to widgets
     '''
+    print 'class Write_to_gui __init__'
+
     def __init__(self, ui, widgetName):
         self.ui = ui
         self.widgetName = widgetName
 
         ''' find and set the widget by widgetName '''
         self.widget = self.ui.centralwidget.findChild(QtGui.QWidget, self.widgetName)
+
+        self.checkBox = QtGui.QCheckBox()
 
 
     def setHorizontalHeader(self):
@@ -53,24 +59,56 @@ class Write_to_gui(object):
         self.widget.setRowCount(row)
         self.widget.setColumnCount(column)
 
+
+    # ------------------------------------------------------------------------------------
     def checkbox_to_table(self, place):
         ''' add Checkbox to tableWidget '''
-        self.checkBox = QtGui.QCheckBox()
-        self.checkBox.setObjectName("checkBox")
-        QtCore.QObject.connect(self.checkBox,QtCore.SIGNAL("toggled(bool)"), table_callback )
+
+        # place[0] at end of name is neccesary for "def table_cb"
+        self.checkBox.setObjectName("%s%s" % (TABLEWIDGET_CHECKBOX_NAME, str(place[0])))
+        self.tablecb = self.table_cb    # init self.table_cb
+        QtCore.QObject.connect(self.checkBox,QtCore.SIGNAL("toggled(bool)"), self.tablecb)
 
         self.widget.setCellWidget(place[0], place[1], self.checkBox)
         self.labeltext_to_table(place, '')
+
+    def table_cb(self):
+        '''
+        callback for checkboxes in tableWidget
+        hide or show the fromat_with comboBox in tableWidget
+        '''
+
+        # get row from checkBox.objectName
+        # (the number from end of name: tableWidget_checkBox0, tableWidget_checkBox1, ...)
+        self.table_row = int(self.checkBox.objectName().split(TABLEWIDGET_CHECKBOX_NAME)[1])
+
+        # get the comboBox format_with
+        self.format_with_combo = self.ui.tableWidget_mountpoints.cellWidget(self.table_row, FORMAT_WITH_COMBO_COLUMN)
+
+        if self.checkBox.checkState() == 2:   # if checkBox = on
+            print 'enable the format_with comboBox'
+            self.format_with_combo.setEnabled(True)
+        else:                                 # if checkBox = off
+            print 'disable the format_with comboBox'
+            self.format_with_combo.setEnabled(False)
+
+    # ------------------------------------------------------------------------------------
+
 
     def combobox_to_table(self, place, text):
         ''' add combobox to tableWidget '''
         self.comboBox = QtGui.QComboBox()
         #print str(self.widget.Name())
         self.comboBox.setObjectName("comboBox_table")
+        if place[1] == FORMAT_WITH_COMBO_COLUMN:
+            # disable the format_with comboBox at start
+            self.comboBox.setEnabled(False)
+
         for t in text:
             self.comboBox.addItem(QtGui.QApplication.translate("", t, None, QtGui.QApplication.UnicodeUTF8))
 
         self.widget.setCellWidget(place[0], place[1], self.comboBox)
+
 
     def labeltext_to_table(self, place, text):
         ''' singleline Text to tableWidget '''
