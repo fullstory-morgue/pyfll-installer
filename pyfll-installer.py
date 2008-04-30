@@ -5,6 +5,7 @@ __copyright__ = '(C) 2008 Horst Tritremmel <hjt@sidux.com>'
 __license__   = 'GPLv2 or any later version'
 
 import os
+import sys
 from src.main import FLLInstaller
 
 # files
@@ -25,8 +26,9 @@ if __name__ == "__main__":
             print "Requires root!"
             sys.exit(1)
 
-        fll = FLLInstaller(CONF_FILE)
-        fll.main()
+        else:
+            fll = FLLInstaller(CONF_FILE)
+            fll.main()
     except KeyboardInterrupt:
         pass
     except Error:

@@ -14,7 +14,7 @@ from subprocess import *
 class Callback(object):   #QtGui.QMainWindow
     def __init__(self, ui, timezone):
         ''' handle callbacks '''
-        #print "class Callback __init__"
+        print "class Callback __init__"
 
         self.ui  = ui
         self.tz  = timezone

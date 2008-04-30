@@ -9,7 +9,9 @@ from callback import *
 
 
 TABLEWIDGET_CHECKBOX_NAME = 'tableWidget_checkBox'
+FILESYSTEM_LABEL_COLUMN   = 1
 FORMAT_WITH_COMBO_COLUMN  = 3
+MOUNTPOINT_COMBO_COLUMN   = 4
 
 
 #
@@ -51,16 +53,15 @@ class Write_to_gui(object):
             self.widget.setHorizontalHeaderItem(self.pos, self.headerItem)
 
 
-    '''
-    Table
-    '''
+
+    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Table
     def cells_to_table(self, row, column):
         ''' add Row and Column to tableWidget '''
         self.widget.setRowCount(row)
         self.widget.setColumnCount(column)
 
 
-    # ------------------------------------------------------------------------------------
+    # ------------------------------------------------------ Table checkbox
     def checkbox_to_table(self, place):
         ''' add Checkbox to tableWidget '''
 
@@ -71,6 +72,7 @@ class Write_to_gui(object):
 
         self.widget.setCellWidget(place[0], place[1], self.checkBox)
         self.labeltext_to_table(place, '')
+
 
     def table_cb(self):
         '''
@@ -85,6 +87,7 @@ class Write_to_gui(object):
         # get the comboBox format_with
         self.format_with_combo = self.ui.tableWidget_mountpoints.cellWidget(self.table_row, FORMAT_WITH_COMBO_COLUMN)
 
+        # enable/disable format_with_combo
         if self.checkBox.checkState() == 2:   # if checkBox = on
             print 'enable the format_with comboBox'
             self.format_with_combo.setEnabled(True)
@@ -92,32 +95,57 @@ class Write_to_gui(object):
             print 'disable the format_with comboBox'
             self.format_with_combo.setEnabled(False)
 
-    # ------------------------------------------------------------------------------------
+        # disable/enable the mountpoint comboBox
+        # if filesystemtyp is available
+        self.enable_mountpoint_combo(self.table_row)
+    # ---------------------------------------------------------------------
 
 
     def combobox_to_table(self, place, text):
         ''' add combobox to tableWidget '''
-        self.comboBox = QtGui.QComboBox()
-        #print str(self.widget.Name())
-        self.comboBox.setObjectName("comboBox_table")
-        if place[1] == FORMAT_WITH_COMBO_COLUMN:
-            # disable the format_with comboBox at start
-            self.comboBox.setEnabled(False)
 
+        self.comboBox = QtGui.QComboBox()
+        self.comboBox.setObjectName("comboBox_table")
         for t in text:
             self.comboBox.addItem(QtGui.QApplication.translate("", t, None, QtGui.QApplication.UnicodeUTF8))
 
+        # disable the format_with comboBox at start
+        if place[1] == FORMAT_WITH_COMBO_COLUMN:
+            self.comboBox.setEnabled(False)
+
+        # set the widget to table
         self.widget.setCellWidget(place[0], place[1], self.comboBox)
+
+        # disable the mountpoint comboBox at start
+        # if filesystemtyp is available
+        if place[1] == MOUNTPOINT_COMBO_COLUMN:
+            self.enable_mountpoint_combo(place[0])
+
+
+    def enable_mountpoint_combo(self, table_row):
+        # enable the mountpoint comboBox
+        # if filesystemtyp is available
+        # or format_checkbox is on
+        self.table_row = table_row
+        self.mountpoint_combo = self.ui.tableWidget_mountpoints.cellWidget(self.table_row, MOUNTPOINT_COMBO_COLUMN)
+        self.fs_label =  self.ui.tableWidget_mountpoints.item(self.table_row, FILESYSTEM_LABEL_COLUMN)
+
+        if len(self.fs_label.text()) == 0 and \
+        self.checkBox.checkState() == 0:
+            self.mountpoint_combo.setCurrentIndex(0)
+            self.mountpoint_combo.setEnabled(False)
+        else:
+            self.mountpoint_combo.setEnabled(True)
 
 
     def labeltext_to_table(self, place, text):
         ''' singleline Text to tableWidget '''
-
-        self.tableLabel = QtGui.QLabel()
-
         item = QtGui.QTableWidgetItem(str(text))
         item.setFlags(QtCore.Qt.ItemIsEnabled)
         self.widget.setItem(place[0], place[1], item)
+
+
+    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
     '''

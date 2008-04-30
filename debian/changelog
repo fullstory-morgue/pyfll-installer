@@ -34,5 +34,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * Timezone bugfix 
   * callback test from tableWidget checkboxes 
   * enable/disable format_with comboBox 
+  * enable/disable table_mountpoint comboBox 
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 30 Apr 2008 15:06:42 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 30 Apr 2008 16:47:52 +0200
