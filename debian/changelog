@@ -35,5 +35,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * callback test from tableWidget checkboxes 
   * enable/disable format_with comboBox 
   * enable/disable table_mountpoint comboBox 
+  * partition_count fixed 
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 30 Apr 2008 16:47:52 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 30 Apr 2008 18:56:48 +0200

@@ -68,11 +68,12 @@ class Diskinfo(object):
         '''
         count partitions
         '''
-        self.count = -1
+        self.count = 0
 
         for self.dev in self.partitions():
             if Diskinfo().udevinfo(self.dev).get('TYP') == 'partition':
                 self.count = self.count + 1
+                print self.dev
 
         return self.count
 

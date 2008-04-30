@@ -71,7 +71,7 @@ class FLLInstaller(object):
         '''
         comboBox_partition and tableWidget_mountpoints
         '''
-        self.row     = Diskinfo().partition_count() + 1
+        self.row     = Diskinfo().partition_count()
         self.column  = 6
         self.place_x = 0
         self.place   = []
