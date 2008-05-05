@@ -15,8 +15,8 @@ from PyQt4.QtCore import QTranslator
 #
 class Gettxt(object):
     ''' translateable strings '''
-    def __init__(self):
-        print 'class Gettxt __init__'
+    #def __init__(self):
+    #print 'class Gettxt __init__'
 
     def not_found(self):
         return QtCore.QCoreApplication.translate("gettxt", "not found")
@@ -29,7 +29,7 @@ class Gettxt(object):
 #
 class Gettxt_gui(object):
     def __init__(self, ui, MainWindow, app):
-        print 'class Gettxt_gui __init__'
+        #print 'class Gettxt_gui __init__'
 
         self.ui = ui
         self.MainWindow = MainWindow

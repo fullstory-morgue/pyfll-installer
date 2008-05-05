@@ -57,6 +57,7 @@ class Write_to_gui(object):
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Table
     def cells_to_table(self, row, column):
         ''' add Row and Column to tableWidget '''
+        self.widget.clear()
         self.widget.setRowCount(row)
         self.widget.setColumnCount(column)
 

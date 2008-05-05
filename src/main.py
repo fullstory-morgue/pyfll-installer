@@ -50,6 +50,7 @@ class FLLInstaller(object):
         for self.c in self.cfile['text_to_comboBox']:
             ''' name in config file must be the same in ui file '''
             self.objectName = self.c[:]
+            print self.objectName
             self.objectValue = self.cfile['text_to_comboBox'][self.objectName]
 
             self.wg = Write_to_gui(self.ui, self.objectName)
@@ -195,7 +196,7 @@ class FLLInstaller(object):
         '''
         callbacks from ui
         '''
-        self.cb = Callback(self.ui, self.timezone)
+        self.cb = Callback(self.ui, self.timezone, self)
 
         sys.exit(self.app.exec_())
 

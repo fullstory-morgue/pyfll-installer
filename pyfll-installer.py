@@ -20,6 +20,7 @@ class Error(Exception):
 #
 # main
 #
+'''
 if __name__ == "__main__":
     try:
         if os.getenv("USER", default=None) != "root":
@@ -33,3 +34,6 @@ if __name__ == "__main__":
         pass
     except Error:
         sys.exit(1)
+'''
+fll = FLLInstaller(CONF_FILE)
+fll.main()

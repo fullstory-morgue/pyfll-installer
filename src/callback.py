@@ -8,16 +8,18 @@ import os
 from PyQt4 import QtCore, QtGui
 from subprocess import *
 
+
 #
 # read from gui (callbacks)
 #
 class Callback(object):   #QtGui.QMainWindow
-    def __init__(self, ui, timezone):
+    def __init__(self, ui, timezone, fll):
         ''' handle callbacks '''
-        print "class Callback __init__"
+        #print "class Callback __init__"
 
         self.ui  = ui
         self.tz  = timezone
+        self.fll = fll
 
         ''' switch stack widget '''
         QtCore.QObject.connect(self.ui.pushButton_next,QtCore.SIGNAL("clicked()"), self.next)
@@ -81,6 +83,13 @@ class Callback(object):   #QtGui.QMainWindow
         print self.c.communicate()[0]
         if not self.c.returncode == 0:
             print 'Error: %s' % ( ' '.join(self.cmd) )
+
+        # reload tableWidget_mountpoint
+        self.ui.comboBox_partition.clear()
+        self.ui.comboBox_installtarget.clear()
+        self.fll.read_config()
+        self.fll.partition_start()
+
 
 
     def run_timezone(self):
