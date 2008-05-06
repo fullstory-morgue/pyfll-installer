@@ -2,7 +2,7 @@ Source: pyfll-installer
 Section: unknown
 Priority: extra
 Maintainer: Horst Tritremmel <hjt@sidux.com>
-Build-Depends: cdbs, debhelper (>= 5), pyqt4-dev-tools
+Build-Depends: cdbs, debhelper (>= 7), pyqt4-dev-tools
 Standards-Version: 3.7.2
 
 Package: pyfll-installer
