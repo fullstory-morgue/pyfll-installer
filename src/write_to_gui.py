@@ -21,7 +21,7 @@ class Write_to_gui(object):
     '''
     write values to widgets
     '''
-    print 'class Write_to_gui __init__'
+    #print 'class Write_to_gui __init__'
 
     def __init__(self, ui, widgetName):
         self.ui = ui

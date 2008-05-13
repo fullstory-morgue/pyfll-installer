@@ -37,5 +37,7 @@ pyfll-installer (001-1) unstable; urgency=low
   * enable/disable table_mountpoint comboBox 
   * partition_count fixed 
   * reload tableWidget after partition tool ends, TEST 
+  * only comments
+  * only comments
 
- -- Horst Tritremmel <hjt@sidux.com>  Mon, 05 May 2008 15:22:27 +0200
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 13 May 2008 16:05:13 +0200

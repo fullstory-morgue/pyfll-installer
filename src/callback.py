@@ -65,6 +65,20 @@ class Callback(object):   #QtGui.QMainWindow
 
 
     def run_partition_tool(self):
+        """
+        stream = fopen( "medianotifierrc", "w+" );
+        if( stream == NULL )
+            printf( "The file medianotifierrc was not opened\n");
+        else
+        {
+            fprintf( stream, "%s\n%s\n%s\n%s\n", 
+                "[Auto Actions]",
+                "media/cdwriter_unmounted=#NothinAction",
+                "media/hdd_unmounted=#NothinAction",
+                "media/removable_unmounted=#NothinAction"
+            );
+        fclose( stream );
+        """
         self.device = self.ui.comboBox_partition.currentText()
 
         if self.ui.radioButton_gparted.isChecked():
@@ -83,6 +97,17 @@ class Callback(object):   #QtGui.QMainWindow
         print self.c.communicate()[0]
         if not self.c.returncode == 0:
             print 'Error: %s' % ( ' '.join(self.cmd) )
+
+        """
+        // update disk name/symlinks after partitioning/reformatting
+        system("udevtrigger --subsystem-match=block");
+        system("udevsettle --timeout=30");
+        // XXX: udevadm will replace udevtrigger/udevsettle
+        // maybe use access("/usr/sbin/udevadm", X_OK) ?
+
+        system("rm -f /home/sidux/.kde/share/config/medianotifierrc;printf \"\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\ncreate fstab\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\";fll_fshelper --write-fstab --make-mountpoints");
+        // create the fstab and start kde automount again
+        """
 
         # reload tableWidget_mountpoint
         self.ui.comboBox_partition.clear()

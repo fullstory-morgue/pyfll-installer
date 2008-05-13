@@ -21,7 +21,7 @@ from disk import *
 
 class FLLInstaller(object):
     def __init__(self, CONF_FILE):
-        print 'class FLLInstaller __init__'
+        #print 'class FLLInstaller __init__'
 
         self.CONF_FILE = CONF_FILE
 
