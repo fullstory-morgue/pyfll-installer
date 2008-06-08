@@ -1,5 +1,6 @@
 pyfll-installer (001-1) unstable; urgency=low
 
+  [ Horst Tritremmel ]
   * trivial/ unuseable packaging, inject, actual development starts when it's
     online
   * worked on tableWidget, partition name, fstype added 
@@ -40,4 +41,8 @@ pyfll-installer (001-1) unstable; urgency=low
   * only comments
   * only comments
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 13 May 2008 16:05:13 +0200
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 3.8.0, no changes necessary.
+  * add myself to uploaders.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Jun 2008 16:32:41 +0200
