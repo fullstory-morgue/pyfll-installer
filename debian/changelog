@@ -44,5 +44,6 @@ pyfll-installer (001-1) unstable; urgency=low
   [ Stefan Lippers-Hollmann ]
   * bump standards version to 3.8.0, no changes necessary.
   * add myself to uploaders.
+  * cupsys --> cups.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Jun 2008 16:32:41 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 25 Jun 2008 13:56:47 +0200

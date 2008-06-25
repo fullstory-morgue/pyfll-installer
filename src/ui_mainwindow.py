@@ -647,14 +647,14 @@ class Ui_MainWindow(object):
         self.gridlayout16 = QtGui.QGridLayout(self.groupBox_services)
         self.gridlayout16.setObjectName("gridlayout16")
 
-        self.checkBox_cupsys = QtGui.QCheckBox(self.groupBox_services)
+        self.checkBox_cups = QtGui.QCheckBox(self.groupBox_services)
 
         font = QtGui.QFont()
         font.setPointSize(9)
-        self.checkBox_cupsys.setFont(font)
-        self.checkBox_cupsys.setChecked(True)
-        self.checkBox_cupsys.setObjectName("checkBox_cupsys")
-        self.gridlayout16.addWidget(self.checkBox_cupsys,0,0,1,1)
+        self.checkBox_cups.setFont(font)
+        self.checkBox_cups.setChecked(True)
+        self.checkBox_cups.setObjectName("checkBox_cups")
+        self.gridlayout16.addWidget(self.checkBox_cups,0,0,1,1)
 
         self.checkBox_ssh = QtGui.QCheckBox(self.groupBox_services)
 
@@ -926,7 +926,7 @@ class Ui_MainWindow(object):
         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Network and services</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.label_25.setText(QtGui.QApplication.translate("MainWindow", "Hostname:", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_services.setTitle(QtGui.QApplication.translate("MainWindow", "start services", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBox_cupsys.setText(QtGui.QApplication.translate("MainWindow", "cupsys (Printing System)", None, QtGui.QApplication.UnicodeUTF8))
+        self.checkBox_cups.setText(QtGui.QApplication.translate("MainWindow", "cups (Printing System)", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_ssh.setText(QtGui.QApplication.translate("MainWindow", "ssh (Secure shell server and client)", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_2.setTitle(QtGui.QApplication.translate("MainWindow", "Timezone", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_timezone.setText(QtGui.QApplication.translate("MainWindow", "Timezone", None, QtGui.QApplication.UnicodeUTF8))

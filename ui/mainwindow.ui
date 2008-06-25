@@ -1225,14 +1225,14 @@ p, li { white-space: pre-wrap; }
             </property>
             <layout class="QGridLayout" >
              <item row="0" column="0" >
-              <widget class="QCheckBox" name="checkBox_cupsys" >
+              <widget class="QCheckBox" name="checkBox_cups" >
                <property name="font" >
                 <font>
                  <pointsize>9</pointsize>
                 </font>
                </property>
                <property name="text" >
-                <string>cupsys (Printing System)</string>
+                <string>cups (Printing System)</string>
                </property>
                <property name="checked" >
                 <bool>true</bool>

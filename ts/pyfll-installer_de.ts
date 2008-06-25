@@ -124,7 +124,7 @@
     </message>
     <message>
         <location filename="ui/mainwindow.ui" line="1235"/>
-        <source>cupsys (Printing System)</source>
+        <source>cups (Printing System)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
