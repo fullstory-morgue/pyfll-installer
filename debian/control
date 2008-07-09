@@ -8,6 +8,6 @@ Standards-Version: 3.8.0
 
 Package: pyfll-installer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python, python-qt4
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, python-qt4, udev (>= 0.124-2)
 Description: pyfll-installer test
  this is only a developer test

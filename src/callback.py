@@ -100,10 +100,8 @@ class Callback(object):   #QtGui.QMainWindow
 
         """
         // update disk name/symlinks after partitioning/reformatting
-        system("udevtrigger --subsystem-match=block");
-        system("udevsettle --timeout=30");
-        // XXX: udevadm will replace udevtrigger/udevsettle
-        // maybe use access("/usr/sbin/udevadm", X_OK) ?
+        system("udevadm trigger --subsystem-match=block");
+        system("udevadm settle --timeout=30");
 
         system("rm -f /home/sidux/.kde/share/config/medianotifierrc;printf \"\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\ncreate fstab\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\";fll_fshelper --write-fstab --make-mountpoints");
         // create the fstab and start kde automount again
