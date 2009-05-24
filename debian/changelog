@@ -47,5 +47,6 @@ pyfll-installer (001-1) unstable; urgency=low
   * cupsys --> cups.
   * use udevadm instead of no longer existing standalone tools, depend on safe
     udev versions.
+  * bump standards version to 3.8.1, no changes necessary.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 09 Jul 2008 14:52:37 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 24 May 2009 14:34:48 +0200
