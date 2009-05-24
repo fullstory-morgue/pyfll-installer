@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Horst Tritremmel <hjt@sidux.com>
 Uploaders: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs, debhelper (>= 7), pyqt4-dev-tools
-Standards-Version: 3.8.0
+Standards-Version: 3.8.1
 
 Package: pyfll-installer
 Architecture: any
