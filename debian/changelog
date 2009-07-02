@@ -1,4 +1,7 @@
-pyfll-installer (001-1) unstable; urgency=low
+pyfll-installer (0.0.1) ORPHANED; urgency=low
+
+  * NOT RELEASED YET
+  * ORPHAN PACKAGE
 
   [ Horst Tritremmel ]
   * trivial/ unuseable packaging, inject, actual development starts when it's
@@ -49,4 +52,4 @@ pyfll-installer (001-1) unstable; urgency=low
     udev versions.
   * bump standards version to 3.8.1, no changes necessary.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 24 May 2009 14:34:48 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 02 Jul 2009 23:35:59 +0200
